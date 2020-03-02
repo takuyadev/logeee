@@ -1,0 +1,75 @@
+/* Style the top navigation bar */
+.navbar {
+    display: flex;
+   
+    font-family:Nunito;
+  }
+  
+  /* Style the navigation bar links */
+  .navbar a {
+    color: #829ab1;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  
+  /* Change color on hover */
+  .navbar a:hover {
+ 
+    color: #186faf;
+
+  }
+  
+  /* Style the active button*/
+  .active{
+    color:whitesmoke;
+  }
+  
+  /* position of the nav bar */
+  .navbar  {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: relative;
+  
+
+  }
+
+  /* style the changing lines */
+
+  #navbar_bar,  #navbar_barback{
+    position: absolute;
+	bottom: 0;
+    left: 0%;
+    border-radius: 20px;
+	display: block;
+	
+	height: 5px;
+   
+
+	transition: all 0.5s;
+  }
+  #navbar_bar{
+    background: #186faf;
+    z-index: 1;
+    left: 33%;
+    width: 33%;
+    transition: 0.25s;
+  }
+  #navbar_barback{
+    
+	background: #EEE;
+	
+    width: 100%;
+    z-index: 0;
+
+  }
+  body{
+      margin: 0px;
+  }
+
+  .slider{
+      position:relative;
+  }
