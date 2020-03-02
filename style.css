@@ -1,0 +1,68 @@
+p{
+    font-family: 'Nunito';
+}
+
+#question1, #question2, #question3, #question4{
+    font-family: 'Nunito'
+}
+
+.screen{
+    width:100vw;
+    height: 100vh;
+    z-index: 1;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+
+}
+body{
+    margin: 0px;
+}
+.btn{
+    z-index: 0;
+    max-width: 700px;
+    min-width: 500px;
+    border-radius: 20px;
+    margin: 10px;
+    border: 5px solid transparent;
+}
+
+.btnConfirm{
+    display: none;
+}
+
+.healthBarStatus{
+    z-index: 2;
+    position: absolute;
+    right: 0px;
+}
+
+.backGreenBar, .greenBar{
+    position:relative;
+    left: 0px;
+    top: 0px;
+    margin: 20px;
+    border-radius: 20px;
+    height: 10px;
+    width: 0%;
+    transition: ease-in-out .2s;
+}
+.backGreenBar{
+    position:absolute;
+    background-color: #EEEEEE;
+    width: 100%;
+    z-index: 0;
+}
+
+.greenBar{
+    background-color: green;
+    z-index: 1;
+}
+
+.questionPage{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}

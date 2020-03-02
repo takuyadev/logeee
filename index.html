@@ -8,6 +8,28 @@
     <link href="https://fonts.googleapis.com/css?family=Baloo|Nunito:400,600,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Game Screen -->
+    <div class="screen">
+        <button class="btnConfirm" onclick="initQuestion()">Next Question</button>
+        <p class="result"></p>
+      </div>
+      <div class="healthBar">
+        <p class="healthBarStatus">3/3</p>
+        <div>
+          <div class="greenBar"></div>
+          <div class="backGreenBar"></div>
+        </div>
+      </div>
+      <div class="questionPage">
+        <p class="statement"></p>
+        <button class="btn" id="question1" onclick="questionAnswer1()"></button>
+        <button class="btn" id="question2" onclick="questionAnswer2()"></button>
+        <button class="btn" id="question3" onclick="questionAnswer3()"></button>
+        <button class="btn" id="question4" onclick="questionAnswer4()"></button>
+        <button onclick="confirm()">Confirm</button>
+        <script src="app.js"></script>
+      </div>
+      <!-- End Game Screen -->
     <script src="app.js"></script>
 </body>
 </html>
