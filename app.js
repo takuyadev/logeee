@@ -95,23 +95,21 @@ var gameQuestions = [
     }
   }
 ];
-
-// var noPreviousQuestions = [];
 var randomGenerator = 0;
 var progressBarStatus = 0;
 var healthStatus = 3;
-startGame();
 
+// Start Game
+startGame();
 function startGame() {
-  // var randomGenerator = Math.floor(Math.random() * 3);
   document.querySelector(".statement").innerText = gameQuestions[randomGenerator].statements;
   document.querySelector("#question1").innerText = gameQuestions[randomGenerator].question1.questionText;
   document.querySelector("#question2").innerText = gameQuestions[randomGenerator].question2.questionText;
   document.querySelector("#question3").innerText = gameQuestions[randomGenerator].question3.questionText;
   document.querySelector("#question4").innerText = gameQuestions[randomGenerator].question4.questionText;
-  // noPreviousQuestions.push(randomGenerator);
 }
 
+// Questions Program
 var varQuestionAnswer = undefined;
 function clearAnswer() {
   document.querySelector("#question1").style.border = "5px solid transparent";
@@ -145,66 +143,40 @@ function questionAnswer4() {
   console.log(varQuestionAnswer);
 }
 
+// Next Question
 function initQuestion() {
   if (progressBarStatus == 100) {
     document.write("Finish");
   } else {
     startGame();
     varQuestionAnswer = undefined;
-    document.querySelector(".screen").style.display = "none";
-    document.querySelector(".btnConfirm").style.display = "none";
+    document.querySelector(".nextQuestionPage").style.display = "none";
+    document.querySelector(".nextQuestionBtn").style.display = "none";
+    clearAnswer();
   }
 }
+
+// Confirm Function
 function confirm() {
   if (healthStatus === 1 && varQuestionAnswer === false) {
     document.querySelector(".questionPage").style.display = "none";
     healthStatus = healthStatus - 1;
-    document.querySelector(".healthBarStatus").innerHTML = healthStatus + "/3";
+    document.querySelector(".healthStatus").innerHTML = healthStatus + "/3";
   } else if (varQuestionAnswer === undefined) {
     document.querySelector(".result").innerHTML = "Please Select an answer.";
   } else if (varQuestionAnswer === false) {
     document.querySelector(".result").innerHTML = "Incorrect.";
     healthStatus = healthStatus - 1;
-    document.querySelector(".healthBarStatus").innerHTML = healthStatus + "/3";
+    document.querySelector(".healthStatus").innerHTML = healthStatus + "/3";
   } else if (varQuestionAnswer === true) {
-    document.querySelector(".result").innerHTML = "Correct!";
+    document.querySelector(".result").innerHTML = "You got it!";
+    document.querySelector(".resultsDescription").innerHTML = "Way to go champ!";
     progressBarStatus = progressBarStatus + 20;
-    document.querySelector(".screen").style.display = "flex";
-    document.querySelector(".btnConfirm").style.display = "flex";
-    document.querySelector(".greenBar").style.width = progressBarStatus + "%";
+    document.querySelector(".nextQuestionBtn").style.display = "flex";
+    document.querySelector(".nextQuestionPage").style.display = "flex";
+    document.querySelector(".blueBar").style.width = progressBarStatus + "%";
     ++randomGenerator;
   } else {
     document.querySelector(".result").innerHTML = "Please Select an answer.";
   }
 }
-
-/*   {
-          statements: ,
-          question1: ,
-          question2: ,
-          question3: ,
-          question4: ,
-          answer: true
-        },
-        {
-          statements: "There",
-          question1: "is",
-          question2: "not",
-          question3: "enough",
-          question4: "questions",
-          answer: true
-        },
-  ];*/
-
-// function questionAnswer(n){
-//   var blah = n.toString();
-//   var varQuestionAnswer = gameQuestions[randomGenerator].question[randomGenerator].answer;
-//   console.log(varQuestionAnswer)
-//   if (varQuestionAnswer === false){
-//     document.querySelector(".result").innerHTML = "Incorrect.";
-//   }
-// else if(varQuestionAnswer === true){
-//   document.querySelector(".result").innerHTML = "Correct!";
-// }
-
-// }

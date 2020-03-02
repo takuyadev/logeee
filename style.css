@@ -1,68 +1,138 @@
-p{
-    font-family: 'Nunito';
+body {
+  margin: 0px;
+  background-color: #f5f7fa;
 }
 
-#question1, #question2, #question3, #question4{
-    font-family: 'Nunito'
+p,
+#question1,
+#question2,
+#question3,
+#question4,
+.quitBtn {
+  font-family: "Nunito";
 }
 
-.screen{
-    width:100vw;
-    height: 100vh;
+h1,
+h2,
+h3 {
+  font-family: "Baloo";
+}
+/* General */
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transition {
+  transition: ease-in-out 0.2s;
+}
+/* Game */
+
+/* General */
+.questionPage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.questionsBtn {
+  z-index: 0;
+  width: 70%;
+  border-radius: 20px;
+  margin: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 5px solid transparent;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  background-color: royalblue;
+}
+
+/* Next Question Page */
+.nextQuestionPage {
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  z-index: 2;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rgba(110, 203, 102, 0.91);
+}
+
+.nextQuestionBtn {
+  display: none;
+  order: 3;
+}
+.resultsDescription {
+  order: 2;
+  margin: 0;
+}
+.result {
+  color: white;
+  order: 1;
+}
+
+/* Status Bar */
+
+.statusHeader {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: "quit progress health";
+  width: 100vw;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.quitBtn {
+  display: flex;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  grid-area: quit;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.quitBtn:hover{
+    transition: ease-in-out 0.2s;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15) inset;
+}
+
+.progressBar {
+  grid-area: progress;
+  position:relative;
+
+}
+
+.healthStatus {
+  grid-area: health;
+  margin: auto;
+}
+
+.blueBar, .backBar {
+  height: 10px;
+  position: absolute;
+  background-color: #0074B5;
+  z-index: 1;
+  width: 0%;
+  border-radius: 20px;
+}
+
+.blueBar {
+    background-color: #0074B5;
     z-index: 1;
-    display:none;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    background-color: rgba(0,0,0,0.5);
-
-}
-body{
-    margin: 0px;
-}
-.btn{
-    z-index: 0;
-    max-width: 700px;
-    min-width: 500px;
-    border-radius: 20px;
-    margin: 10px;
-    border: 5px solid transparent;
-}
-
-.btnConfirm{
-    display: none;
-}
-
-.healthBarStatus{
-    z-index: 2;
-    position: absolute;
-    right: 0px;
-}
-
-.backGreenBar, .greenBar{
-    position:relative;
-    left: 0px;
-    top: 0px;
-    margin: 20px;
-    border-radius: 20px;
-    height: 10px;
     width: 0%;
-    transition: ease-in-out .2s;
-}
-.backGreenBar{
-    position:absolute;
-    background-color: #EEEEEE;
-    width: 100%;
+  }
+
+  .backBar {
+    background-color: #BCE0F5;
     z-index: 0;
-}
-
-.greenBar{
-    background-color: green;
-    z-index: 1;
-}
-
-.questionPage{
-    display:flex;
-    align-items: center;
-    flex-direction: column;
-}
+    width: 100%;
+  }
