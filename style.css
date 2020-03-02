@@ -1,0 +1,103 @@
+body {
+    background-color: #F8F9FA;
+    margin: 0px;
+    position: absolute;
+    top: 4%;
+}
+
+.buttonBlue {
+    font-family: Baloo;
+    border: solid #4098D7 1px;
+    padding: 15px 55px;
+    color: white;
+    background-color: #4098D7;
+    border-radius: 40px;
+    font-size: 22px;
+}
+
+.buttonBlue:hover {
+    background-color: #2471a8;
+    border: solid #2471a8 1px;
+}
+
+/* page 1 */
+
+#page1Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logoTitle {
+    font-family: Baloo;
+    color: white;
+    -webkit-text-stroke: #F46969 2.5px;
+    font-size: 60pt;
+    padding:
+}
+
+#introText {
+    font-family: Nunito;
+    margin-top: -50px;
+    text-align: center;
+    padding: 0px 35px; 
+    font-size: 17px;
+}
+
+#introMascot {
+    padding: 15px 0px 10px 0px;
+    width: 280px;
+    height: 280px;
+}
+
+/* page 2 */
+
+#page2Content {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    
+}
+
+#Page2Mascot {
+    padding: 0px 0px 0px 0px;
+    width: 280px;
+    height: 280px;
+}
+
+#Page2Heading {
+    font-family: Baloo;
+    font-size: 22px;
+}
+
+#Page2Body {
+    font-family: Nunito;
+    text-align: center;
+    padding: 0px 35px;
+    margin: -20px 20px 0px;
+    font-size: 16px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 7px #ACACAC;
+
+}
+
+/* Page 3 */
+
+#page3Content {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    
+}
+
+#Page3Mascot {
+    padding: 0px 0px 0px 0px;
+    width: 280px;
+    height: 280px;
+}
