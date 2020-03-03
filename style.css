@@ -17,6 +17,27 @@ h2,
 h3 {
   font-family: "Baloo";
 }
+
+.reasoning {
+  font-family: Baloo;
+  font-size: 21px;
+  color: #f06364;
+  margin: 2px;
+  text-decoration: underline;
+}
+
+.questionText {
+  font-family: "Baloo";
+  margin: 2px;
+  font-size: 21px;
+}
+
+.questionCount {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 60px;
+  position:relative;
+}
 /* General */
 
 .page {
@@ -28,6 +49,55 @@ h3 {
 .transition {
   transition: ease-in-out 0.2s;
 }
+
+.btn {
+  font-family: "Baloo";
+  padding: 15px 55px;
+  color: white;
+  border-radius: 40px;
+  font-size: 22px;
+  margin: 20px;
+  border: transparent;
+  cursor: pointer;
+}
+
+.buttonBlue {
+  background-color: #4098d7;
+}
+.buttonBlue:hover {
+  background-color: #2471a8;
+}
+
+.buttonRed {
+  background-color: #f06364;
+}
+
+.buttonRed:hover {
+  background-color: rgb(99, 99, 99);
+}
+/* How to Play */
+
+.howToPlayContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.howToPlayTextBox{
+    margin: 20px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    max-width: 400px;
+    padding: 1.5em;
+}
+
+.arrowImage{
+    width: 30px;
+}
+
 /* Game */
 
 /* General */
@@ -42,8 +112,14 @@ h3 {
   width: 70%;
   border-radius: 20px;
   margin: 10px;
+  max-width: 300px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: 5px solid transparent;
+}
+
+.questionsBtn:hover {
+  border: 5px solid #af6262;
+  cursor: pointer;
 }
 
 .image {
@@ -65,15 +141,31 @@ h3 {
   background-color: rgba(110, 203, 102, 0.91);
 }
 
-.nextQuestionBtn {
+.incorrectPage {
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  z-index: 2;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rgba(72, 129, 195, 0.9);
+}
+
+.nextQuestionBtn,
+.tryAgainButton {
   display: none;
   order: 3;
 }
-.resultsDescription {
+.resultsDescription,
+.resultsDescription2 {
   order: 2;
+  color: white;
   margin: 0;
 }
-.result {
+.result,
+.result2 {
   color: white;
   order: 1;
 }
@@ -100,15 +192,15 @@ h3 {
   justify-content: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-.quitBtn:hover{
-    transition: ease-in-out 0.2s;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15) inset;
+.quitBtn:hover {
+  transition: ease-in-out 0.2s;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15) inset;
 }
 
 .progressBar {
   grid-area: progress;
-  position:relative;
-
+  position: relative;
+ 
 }
 
 .healthStatus {
@@ -116,23 +208,25 @@ h3 {
   margin: auto;
 }
 
-.blueBar, .backBar {
+.blueBar,
+.backBar {
   height: 10px;
   position: absolute;
-  background-color: #0074B5;
+  background-color: #0074b5;
   z-index: 1;
   width: 0%;
+  margin-top: 20px;
   border-radius: 20px;
 }
 
 .blueBar {
-    background-color: #0074B5;
-    z-index: 1;
-    width: 0%;
-  }
+  background-color: #0074b5;
+  z-index: 1;
+  width: 0%;
+}
 
-  .backBar {
-    background-color: #BCE0F5;
-    z-index: 0;
-    width: 100%;
-  }
+.backBar {
+  background-color: #bce0f5;
+  z-index: 0;
+  width: 100%;
+}
