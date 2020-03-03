@@ -1,13 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Logeee</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Baloo|Nunito:400,600,900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Baloo|Nunito:400,600,900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+      <!-- How to Play -->
+      <div id="page4Content">
+        <div class="howToPlayContainer">
+          <div class="howToPlayTextBox">
+            <p>
+              You will be presented with an argument, and <b>4 potential responses</b> to that arguement.
+            </p>
+          </div>
+          <img src="imgs/arrow.svg" alt="" class="arrowImage">
+          <div class="howToPlayTextBox">
+            <p>
+              Pick the response that best represents either <b>deductive or inductrive reasoning,</b> depending on what the
+              question asks.
+            </p>
+          </div>
+          <img src="imgs/arrow.svg" alt="" class="arrowImage">
+          <div class="howToPlayTextBox">
+            <p>
+              Once you have picked your choice, <b>hit the “Confirm” button.</b> If you are wrong 3 times, its a Game Over!
+            </p>
+          </div>
+          <button class="nextPageBtn btn buttonRed">Next Page</button>
+        </div>
+        
+      </div>
+      <!-- End How to Play -->
+    <!-- Game Screen -->
+    <div class="nextQuestionPage">
+        <h1 class="result"></h1>
+      <p class="resultsDescription"></p>
+
+      <button class="nextQuestionBtn btn buttonRed" onclick="initQuestion()">Next Question</button>
+    </div>
+    <div class="incorrectPage">
+      
+      <p class="resultsDescription2"></p>
+      <h1 class="result2"></h1>
+      <button class="tryAgainButton btn buttonRed" onclick="tryAgain()">Try Again!</button>
+    </div>
+
+    <div class="questionPage">
+      <header class="statusHeader">
+        <div class="quitBtn transition" onclick="page4()">X</div>
+        <div class="progressBar">
+          <div class="blueBar transition"></div>
+          <div class="backBar transition"></div>
+          <p class="questionCount"></p>
+        </div>
+        <p class="healthStatus">3/3</p>
+      </header>
+      <p class="questionText">Select the answer that best represents</p>
+      <p class="reasoning"></p>
+      <p class="questionText">and then confirm your answer.</p>
+      <div class="image"></div>
+      <p class="statement"></p>
+      <button class="questionsBtn transition" id="question1" onclick="questionAnswer1()"></button>
+      <button class="questionsBtn transition" id="question2" onclick="questionAnswer2()"></button>
+      <button class="questionsBtn transition" id="question3" onclick="questionAnswer3()"></button>
+      <button class="questionsBtn transition" id="question4" onclick="questionAnswer4()"></button>
+      <button class="confirm btn buttonBlue transition" onclick="confirm()">Confirm</button>
+      <script src="app.js"></script>
+    </div>
+    <!-- End Game Screen -->
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
