@@ -23,6 +23,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width:100vw;
+    height:100vh;
 }
 
 #logoTitle {
@@ -149,13 +151,13 @@ body {
     margin-top: 45px; 
 }
 /* page 4 */
-
-#page4 {
-    display:none; 
-  margin: 0px;
-  background-color: #f5f7fa;
+#page4Content{
+  display:none;
+  justify-content: center;
+  align-items: center;
+  width:100vw;
+  height:100vh;
 }
-
 p,
 #question1,
 #question2,
@@ -197,6 +199,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .transition {
@@ -255,7 +258,7 @@ h3 {
 
 /* General */
 .questionPage {
-  display: flex;
+  display: none;
   align-items: center;
   flex-direction: column;
 }

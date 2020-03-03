@@ -13,7 +13,7 @@
         <h1 id="logoTitle">Logee</h1>
         <p id="introText">A short game that teaches the fundementals of deductive and inductive reasoning</p>
         <img id="introMascot" src=http://placekitten.com/200/300/> 
-        <p class="buttonBlue" onclick="Page2()">Lets Learn!</p>
+        <p class="buttonBlue btn" onclick="Page2()">Lets Learn!</p>
     </div>
 
     <!-- Page 2 Intro -->
@@ -21,7 +21,7 @@
         <img id="Page2Mascot" src=http://placekitten.com/200/300/> 
         <h4 id="Page2Heading">Why is Reasoning Important?</h4>
         <p id="Page2Body">Everyday, we are faced with situations, both large and small, where we have to make choices and decisions to get through our day. As such, knowing how to reason is important, as it enables us to evaluate the situations we are in, and successfully respond to them to achieve the outcome we want</p>
-        <p class="buttonBlue" onclick="Page3()">Next Page</p>
+        <p class="buttonBlue btn" onclick="Page3()">Next Page</p>
     </div>
 
     <!-- page 3a Deductive Reasoning -->
@@ -35,11 +35,6 @@
             <p id="inductTab" onclick="inductiveTab()">Inductive</p>
         </div>
         <p class="buttonGray" onclick="Page4()">Next Page</p>
-    </div>
-
-    <!-- page 4 -->
-    <div id="page4">
-    <img id="Page4Mascot" src=http://placekitten.com/200/300/> 
     </div>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Baloo|Nunito:400,600,900&display=swap" rel="stylesheet" />
@@ -66,7 +61,7 @@
               Once you have picked your choice, <b>hit the “Confirm” button.</b> If you are wrong 3 times, its a Game Over!
             </p>
           </div>
-          <button class="nextPageBtn btn buttonRed">Next Page</button>
+          <button class="nextPageBtn btn buttonRed" onclick="pageQuestionPage()">Next Page</button>
         </div>
         
       </div>

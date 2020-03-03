@@ -11,8 +11,13 @@ function Page3() {
 
 function Page4() {
     document.querySelector("#page3Content").style.display = "none";
-    document.querySelector("#page4").style.display = "block";
+    document.querySelector("#page4Content").style.display = "flex";
 }
+function pageQuestionPage() {
+  document.querySelector("#page4Content").style.display = "none";
+  document.querySelector(".questionPage").style.display = "flex";
+}
+
 
 function inductiveTab() {
     document.querySelector("#inductTab").style.padding = "10px 20px 35px";
