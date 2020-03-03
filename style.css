@@ -1,4 +1,157 @@
 body {
+
+    background-color: #F8F9FA;
+    margin: 0px;
+    position: absolute;
+    top: 4%;
+}
+
+.buttonGray {
+    font-family: Baloo;
+    border: solid #B4B4B4 1px;
+    padding: 15px 55px;
+    color: white;
+    background-color: #B4B4B4;
+    border-radius: 40px;
+    font-size: 22px;
+}
+
+/* page 1 */
+
+#page1Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logoTitle {
+    font-family: Baloo;
+    color: white;
+    -webkit-text-stroke: #F46969 2.5px;
+    font-size: 60pt;
+}
+
+#introText {
+    font-family: Nunito;
+    margin-top: -50px;
+    text-align: center;
+    padding: 0px 35px; 
+    font-size: 17px;
+}
+
+#introMascot {
+    padding: 15px 0px 10px 0px;
+    width: 280px;
+    height: 280px;
+}
+
+/* page 2 */
+
+#page2Content {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    
+}
+
+#Page2Mascot {
+    padding: 0px 0px 0px 0px;
+    width: 280px;
+    height: 280px;
+}
+
+#Page2Heading {
+    font-family: Baloo;
+    font-size: 22px;
+}
+
+#Page2Body {
+    font-family: Nunito;
+    text-align: center;
+    padding: 25px 25px;
+    margin: -20px 20px 0px;
+    font-size: 16px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 7px #ACACAC;
+
+}
+
+/* Page 3 */
+
+#page3Content {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100vw;    
+}
+
+#Page3Heading {
+    font-family: Baloo;
+    font-size: 22px;
+    margin-bottom: 13px;
+}
+
+#Page3Mascot {
+    padding: 0px 0px 0px 0px;
+    width: 280px;
+    height: 280px;
+}
+
+#Page3SubHeading {
+    font-family: Baloo;
+    font-size: 20px;
+    margin-top: 13px;
+}
+
+#Page3Body {
+    font-family: Nunito;
+    background-color: white;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 30px;
+    margin: -20px 20px 0px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 7px #ACACAC;
+}
+
+#tab {
+    display: flex;
+    margin-bottom: -32px;
+}
+
+#deductTab {
+    font-family: Baloo;
+    padding: 10px 20px 30px;
+    font-size: 16pt;
+    background-color: #F46969; 
+    color: white; 
+    border-radius: 20px 20px 0px 0px;
+    text-decoration: white underline;
+    margin-right: 10px;
+    height: 25px;
+}
+
+#inductTab {
+    font-family: Baloo;
+    padding: 5px 20px 15px;
+    font-size: 16pt;
+    background-color: #AF6262; 
+    color: white; 
+    border-radius: 20px 20px 0px 0px;
+    margin-left: 10px;
+    height: 20px; 
+    margin-top: 45px; 
+}
+/* page 4 */
+
+#page4 {
+    display:none; 
   margin: 0px;
   background-color: #f5f7fa;
 }
@@ -230,3 +383,4 @@ h3 {
   z-index: 0;
   width: 100%;
 }
+
