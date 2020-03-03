@@ -8,40 +8,42 @@
     <link href="https://fonts.googleapis.com/css?family=Baloo|Nunito:400,600,900&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="app">
+    <div class="screen">
     <!-- Page 1 Homepage -->
-    <div id="page1Content">
-        <h1 id="logoTitle">Logee</h1>
-        <p id="introText">A short game that teaches the fundementals of deductive and inductive reasoning</p>
-        <img id="introMascot" src=http://placekitten.com/200/300/> 
-        <p class="buttonBlue btn" onclick="Page2()">Lets Learn!</p>
+    <div class="page" id="page1">
+      <h1>Logee</h1>
+        <p class="introText">A short game that teaches the fundementals of deductive and inductive reasoning</p>
+        <img class="mascotImage" src=http://placekitten.com/200/300/> 
+        <p class="buttonBlue btn" onclick="nextPage(1)">Lets Learn!</p>
     </div>
 
     <!-- Page 2 Intro -->
-    <div id="page2Content">
-        <img id="Page2Mascot" src=http://placekitten.com/200/300/> 
-        <h4 id="Page2Heading">Why is Reasoning Important?</h4>
-        <p id="Page2Body">Everyday, we are faced with situations, both large and small, where we have to make choices and decisions to get through our day. As such, knowing how to reason is important, as it enables us to evaluate the situations we are in, and successfully respond to them to achieve the outcome we want</p>
-        <p class="buttonBlue btn" onclick="Page3()">Next Page</p>
+    <div class="page" id="page2">
+        <img class="mascotImage" src=http://placekitten.com/200/300/> 
+        <h2>Why is Reasoning Important?</h2>
+        <p class="textBody">Everyday, we are faced with situations, both large and small, where we have to make choices and decisions to get through our day. As such, knowing how to reason is important, as it enables us to evaluate the situations we are in, and successfully respond to them to achieve the outcome we want</p>
+        <p class="buttonBlue btn" onclick="nextPage(2)">Next Page</p>
     </div>
 
     <!-- page 3a Deductive Reasoning -->
-    <div id="page3Content">
-        <h4 id="Page3Heading">Deductive Reasoning</h4>
-        <img id="Page3Mascot" src=http://placekitten.com/200/300/> 
-        <h5 id="Page3SubHeading">Facts Over Opinions</h5>
-        <p id="Page3Body"> Deductive reasoning is when a person makes an arguement or decsion that is based on true facts. It is based on the idea that if the facts are true, then the conclusion must also be true</p>
+    <div class="page" id="page3">
+        <h2>Deductive Reasoning</h2>
+        <img class="mascotImage" src=http://placekitten.com/200/300/> 
+        <h2>Facts Over Opinions</h2>
+        <p class="textBody"> Deductive reasoning is when a person makes an arguement or decsion that is based on true facts. It is based on the idea that if the facts are true, then the conclusion must also be true</p>
         <div id="tab">
-            <p id="deductTab" onclick="deductiveTab()">Deductive</p>
-            <p id="inductTab" onclick="inductiveTab()">Inductive</p>
+            <p id="deductTab" class="tabReasoning" onclick="deductiveTab()">Deductive</p>
+            <p id="inductTab" class="tabReasoning"  onclick="inductiveTab()">Inductive</p>
         </div>
-        <p class="buttonGray" onclick="Page4()">Next Page</p>
+        <p class="btn buttonGray" onclick="nextPage(3)">Next Page</p>
     </div>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Baloo|Nunito:400,600,900&display=swap" rel="stylesheet" />
   </head>
   <body>
       <!-- How to Play -->
-      <div id="page4Content">
+      <div class="page" id="page4">
         <div class="howToPlayContainer">
           <div class="howToPlayTextBox">
             <p>
@@ -61,9 +63,8 @@
               Once you have picked your choice, <b>hit the “Confirm” button.</b> If you are wrong 3 times, its a Game Over!
             </p>
           </div>
-          <button class="nextPageBtn btn buttonRed" onclick="pageQuestionPage()">Next Page</button>
+          <button class="nextPageBtn btn buttonRed" onclick="nextPage(4)">Next Page</button>
         </div>
-        
       </div>
       <!-- End How to Play -->
     <!-- Game Screen -->
@@ -80,9 +81,9 @@
       <button class="tryAgainButton btn buttonRed" onclick="tryAgain()">Try Again!</button>
     </div>
 
-    <div class="questionPage">
+    <div class="page" id="page5">
       <header class="statusHeader">
-        <div class="quitBtn transition" onclick="page4()">X</div>
+        <div class="quitBtn transition" onclick="nextPage(3)">X</div>
         <div class="progressBar">
           <div class="blueBar transition"></div>
           <div class="backBar transition"></div>
@@ -102,7 +103,10 @@
       <button class="confirm btn buttonBlue transition" onclick="confirm()">Confirm</button>
       <script src="app.js"></script>
     </div>
+  </div>
+</div>
     <!-- End Game Screen -->
     <script src="app.js"></script>
+ 
   </body>
 </html>

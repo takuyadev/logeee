@@ -1,18 +1,10 @@
 
-function Page2() {
-    document.querySelector("#page1Content").style.display = "none";
-    document.querySelector("#page2Content").style.display = "flex";
+function nextPage(n) {
+    document.querySelector("#page"+ n).style.display = "none";
+    n = n + 1;
+    document.querySelector("#page"+ n).style.display = "flex";
 }
 
-function Page3() {
-    document.querySelector("#page2Content").style.display = "none";
-    document.querySelector("#page3Content").style.display = "flex";
-}
-
-function Page4() {
-    document.querySelector("#page3Content").style.display = "none";
-    document.querySelector("#page4Content").style.display = "flex";
-}
 function pageQuestionPage() {
   document.querySelector("#page4Content").style.display = "none";
   document.querySelector(".questionPage").style.display = "flex";

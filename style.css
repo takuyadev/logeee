@@ -1,163 +1,116 @@
-body {
+.app,
+.screen {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  justify-content: center;
+}
 
-    background-color: #F8F9FA;
-    margin: 0px;
-    position: absolute;
-    top: 4%;
+.screen {
+  width: 40vw;
+  background-color: #f0f4f8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 100, 0.35);
 }
 
 .buttonGray {
-    font-family: Baloo;
-    border: solid #B4B4B4 1px;
-    padding: 15px 55px;
-    color: white;
-    background-color: #B4B4B4;
-    border-radius: 40px;
-    font-size: 22px;
+  font-family: Baloo;
+  border: solid #b4b4b4 1px;
+  padding: 15px 55px;
+  color: white;
+  background-color: #b4b4b4;
+  border-radius: 40px;
+  font-size: 22px;
 }
 
+.page {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Baloo";
+}
+
+h1 {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: red;
+}
 /* page 1 */
 
-#page1Content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width:100vw;
-    height:100vh;
+.introText {
+  text-align: center;
 }
 
-#logoTitle {
-    font-family: Baloo;
-    color: white;
-    -webkit-text-stroke: #F46969 2.5px;
-    font-size: 60pt;
-}
-
-#introText {
-    font-family: Nunito;
-    margin-top: -50px;
-    text-align: center;
-    padding: 0px 35px; 
-    font-size: 17px;
-}
-
-#introMascot {
-    padding: 15px 0px 10px 0px;
-    width: 280px;
-    height: 280px;
+#page1 {
+  display: flex;
 }
 
 /* page 2 */
 
-#page2Content {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 80px;
-    
+#page2 {
+  display: none;
 }
 
-#Page2Mascot {
-    padding: 0px 0px 0px 0px;
-    width: 280px;
-    height: 280px;
-}
-
-#Page2Heading {
-    font-family: Baloo;
-    font-size: 22px;
-}
-
-#Page2Body {
-    font-family: Nunito;
-    text-align: center;
-    padding: 25px 25px;
-    margin: -20px 20px 0px;
-    font-size: 16px;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0px 0px 7px #ACACAC;
-
+.textBody {
+  font-family: Nunito;
+  max-width: 500px;
+  text-align: center;
+  padding: 25px 25px;
+  margin: -20px 20px 0px;
+  font-size: 16px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 0px 7px #acacac;
 }
 
 /* Page 3 */
 
-#page3Content {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    width: 100vw;    
+#page3 {
+  display: none;
 }
-
-#Page3Heading {
-    font-family: Baloo;
-    font-size: 22px;
-    margin-bottom: 13px;
-}
-
-#Page3Mascot {
-    padding: 0px 0px 0px 0px;
-    width: 280px;
-    height: 280px;
-}
-
-#Page3SubHeading {
-    font-family: Baloo;
-    font-size: 20px;
-    margin-top: 13px;
-}
-
-#Page3Body {
-    font-family: Nunito;
-    background-color: white;
-    font-size: 16px;
-    text-align: center;
-    padding: 20px 30px;
-    margin: -20px 20px 0px 20px;
-    border-radius: 20px;
-    box-shadow: 0px 0px 7px #ACACAC;
+.mascotImage {
+  padding: 0px 0px 0px 0px;
+  width: 280px;
+  height: 280px;
 }
 
 #tab {
-    display: flex;
-    margin-bottom: -32px;
+  display: flex;
+  margin-bottom: -32px;
+}
+
+.tabReasoning {
+  font-family: Baloo;
+  font-size: 16pt;
+  color: white;
+  border-radius: 20px 20px 0px 0px;
+  text-decoration: white underline;
+  margin-right: 10px;
 }
 
 #deductTab {
-    font-family: Baloo;
-    padding: 10px 20px 30px;
-    font-size: 16pt;
-    background-color: #F46969; 
-    color: white; 
-    border-radius: 20px 20px 0px 0px;
-    text-decoration: white underline;
-    margin-right: 10px;
-    height: 25px;
+  padding: 10px 20px 30px;
+  background-color: #f46969;
+  text-decoration: white underline;
+  height: 25px;
 }
 
 #inductTab {
-    font-family: Baloo;
-    padding: 5px 20px 15px;
-    font-size: 16pt;
-    background-color: #AF6262; 
-    color: white; 
-    border-radius: 20px 20px 0px 0px;
-    margin-left: 10px;
-    height: 20px; 
-    margin-top: 45px; 
+  padding: 5px 20px 15px;
+  background-color: #af6262;
+  height: 20px;
+  margin-top: 45px;
 }
-/* page 4 */
-#page4Content{
-  display:none;
-  justify-content: center;
-  align-items: center;
-  width:100vw;
-  height:100vh;
-}
+
 p,
 #question1,
 #question2,
@@ -191,16 +144,9 @@ h3 {
   text-align: center;
   font-weight: 600;
   margin-top: 60px;
-  position:relative;
+  position: relative;
 }
 /* General */
-
-.page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
 
 .transition {
   transition: ease-in-out 0.2s;
@@ -212,7 +158,6 @@ h3 {
   color: white;
   border-radius: 40px;
   font-size: 22px;
-  margin: 20px;
   border: transparent;
   cursor: pointer;
 }
@@ -233,31 +178,30 @@ h3 {
 }
 /* How to Play */
 
-.howToPlayContainer{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+.howToPlayContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.howToPlayTextBox{
-    margin: 20px;
-    text-align: center;
-    border-radius: 20px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    max-width: 400px;
-    padding: 1.5em;
+.howToPlayTextBox {
+  margin: 20px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  padding: 1.5em;
 }
 
-.arrowImage{
-    width: 30px;
+.arrowImage {
+  width: 30px;
 }
 
 /* Game */
 
 /* General */
-.questionPage {
+#page5 {
   display: none;
   align-items: center;
   flex-direction: column;
@@ -332,7 +276,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-areas: "quit progress health";
-  width: 100vw;
+  width: 100%;
   align-items: center;
   margin-bottom: 25px;
 }
@@ -356,7 +300,6 @@ h3 {
 .progressBar {
   grid-area: progress;
   position: relative;
- 
 }
 
 .healthStatus {
@@ -386,4 +329,3 @@ h3 {
   z-index: 0;
   width: 100%;
 }
-
