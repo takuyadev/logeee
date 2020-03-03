@@ -20,6 +20,16 @@ body {
     border: solid #2471a8 1px;
 }
 
+.buttonGray {
+    font-family: Baloo;
+    border: solid #B4B4B4 1px;
+    padding: 15px 55px;
+    color: white;
+    background-color: #B4B4B4;
+    border-radius: 40px;
+    font-size: 22px;
+}
+
 /* page 1 */
 
 #page1Content {
@@ -34,7 +44,6 @@ body {
     color: white;
     -webkit-text-stroke: #F46969 2.5px;
     font-size: 60pt;
-    padding:
 }
 
 #introText {
@@ -76,7 +85,7 @@ body {
 #Page2Body {
     font-family: Nunito;
     text-align: center;
-    padding: 0px 35px;
+    padding: 25px 25px;
     margin: -20px 20px 0px;
     font-size: 16px;
     background-color: white;
@@ -92,12 +101,69 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
-    
+    margin-top: 20px;
+    width: 100vw;    
+}
+
+#Page3Heading {
+    font-family: Baloo;
+    font-size: 22px;
+    margin-bottom: 13px;
 }
 
 #Page3Mascot {
     padding: 0px 0px 0px 0px;
     width: 280px;
     height: 280px;
+}
+
+#Page3SubHeading {
+    font-family: Baloo;
+    font-size: 20px;
+    margin-top: 13px;
+}
+
+#Page3Body {
+    font-family: Nunito;
+    background-color: white;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 30px;
+    margin: -20px 20px 0px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 7px #ACACAC;
+}
+
+#tab {
+    display: flex;
+    margin-bottom: -32px;
+}
+
+#deductTab {
+    font-family: Baloo;
+    padding: 10px 20px 30px;
+    font-size: 16pt;
+    background-color: #F46969; 
+    color: white; 
+    border-radius: 20px 20px 0px 0px;
+    text-decoration: white underline;
+    margin-right: 10px;
+    height: 25px;
+}
+
+#inductTab {
+    font-family: Baloo;
+    padding: 5px 20px 15px;
+    font-size: 16pt;
+    background-color: #AF6262; 
+    color: white; 
+    border-radius: 20px 20px 0px 0px;
+    margin-left: 10px;
+    height: 20px; 
+    margin-top: 45px; 
+}
+/* page 4 */
+
+#page4 {
+    display:none; 
 }
