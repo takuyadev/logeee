@@ -21,6 +21,7 @@ var gameQuestions = [
   },
   {
     statements: "Let's go to Pokemon Cafe instead of Kirby Cafe",
+    reasoning: "inductive reasoning",
     question1: {
       questionText: "The Pokemon Cafe is closed",
       answer: true
@@ -185,6 +186,7 @@ function tryAgain() {
   }
 }
 
+// Incorrect and Correct Pages
 function incorrectPageShow() {
   document.querySelector(".incorrectPage").style.display = "flex";
   document.querySelector(".tryAgainButton").style.display = "flex";
