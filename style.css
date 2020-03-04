@@ -1,94 +1,154 @@
+/* NAVIGATION BAR */
 
 /* Style the top navigation bar */
 .navbar {
-    display: flex;
-   
-    font-family:Nunito;
-  }
-  
-  /* Style the navigation bar links */
-  .navbar a {
-    color: #829ab1;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-    font-size: 14px;
-  }
-  
-  
-  /* Change color on hover */
-  .navbar a:hover {
- 
-    color: #186faf;
+  display: flex;
+  width: 100%;
 
-  }
-  
-  /* Style the active button*/
-  .active{
-    color:whitesmoke;
-  }
-  
-  /* position of the nav bar */
-  .navbar  {
+  font-family: Nunito;
+}
+header {
+  width: 90%;
+  display: none;
+  margin: 10px 0px 5% 0px;
+}
+/* Style the navigation bar links */
+.navbar a {
+  color: #829ab1;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  color: #186faf;
+}
+
+/* Style the active button*/
+.active {
+  color: whitesmoke;
+}
+
+/* position of the nav bar */
+.navbar {
   display: flex;
   justify-content: space-around;
   width: 100%;
   position: relative;
-  
+}
 
-  }
+/* style the changing lines */
 
-  /* style the changing lines */
+#navbar_bar,
+#navbar_barback {
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  border-radius: 20px;
+  display: block;
+  height: 5px;
+  transition: all 0.5s;
+}
 
-  #navbar_bar,  #navbar_barback{
-    position: absolute;
-	bottom: 0;
-    left: 0%;
-    border-radius: 20px;
-	display: block;
-	
-	height: 5px;
-   
+#navbar_bar {
+  background: #186faf;
+  z-index: 1;
+  left: 3%;
+  width: 33%;
+  transition: 0.25s;
+}
+#navbar_barback {
+  background: #eee;
+  width: 100%;
+  z-index: 0;
+}
+body {
+  margin: 0px;
+}
 
-	transition: all 0.5s;
-  }
-  #navbar_bar{
-    background: #186faf;
-    z-index: 1;
-    left: 33%;
-    width: 33%;
-    transition: 0.25s;
-  }
-  #navbar_barback{
-    
-	background: #EEE;
-	
-    width: 100%;
-    z-index: 0;
+.slider {
+  position: relative;
+}
 
-  }
-  body{
-      margin: 0px;
-  }
-
-  .slider{
-      position:relative;
-  }
-
+/* GENERAL PAGE USES; FONTS, PAGES, BUTTONS, IMAGES AND SCREEN SIZE */
 .app,
 .screen {
   display: flex;
   align-items: center;
   width: 100vw;
-  justify-content: center;
+  flex-direction: column;
+  min-height: 1000px;
 }
 
 .screen {
   width: 40vw;
+  min-width: 500px;
   background-color: #f0f4f8;
   box-shadow: 0px 4px 4px rgba(0, 0, 100, 0.35);
+  padding: 10px;
 }
 
+/* GENERAL PAGE USES */
+.textBody {
+  font-family: Nunito;
+  max-width: 500px;
+  text-align: center;
+  padding: 50px 50px;
+  margin: -20px 20px 0px;
+  font-size: 16px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 0px 7px #acacac;
+}
+
+.mascotImage {
+  padding: 0px 0px 0px 0px;
+  width: 280px;
+  height: 280px;
+}
+.transition {
+  transition: ease-in-out 0.2s;
+}
+
+.page {
+  display: none;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 20px;
+}
+
+/* BUTTONS */
+
+.btn {
+  font-family: "Baloo";
+  padding: 15px 55px;
+  color: white;
+  border-radius: 40px;
+  font-size: 22px;
+  border: transparent;
+  cursor: pointer;
+  margin: 40px;
+}
+
+.buttonBlue {
+  background-color: #4098d7;
+}
+.buttonBlue:hover {
+  background-color: #2471a8;
+}
+
+.buttonRed {
+  background-color: #f06364;
+}
+
+.buttonRed:hover {
+  background-color: rgb(99, 99, 99);
+}
 .buttonGray {
   font-family: Baloo;
   border: solid #b4b4b4 1px;
@@ -99,15 +159,7 @@
   font-size: 22px;
 }
 
-.page {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-}
-
+/* FONTS */
 h1,
 h2,
 h3,
@@ -117,54 +169,42 @@ h6 {
   font-family: "Baloo";
 }
 
-h1 {
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: red;
+h2 {
+  margin-bottom: 1.5em;
 }
-/* page 1 */
+
+/* page 1 Homepage*/
 
 .introText {
   text-align: center;
 }
-
+.pageTitle{
+  font-size: 6em;
+  margin:0px;
+  height: 125px;
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #F46969;
+}
 #page1 {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* page 2 */
+/* page 2 Introduction*/
 
 #page2 {
   display: none;
 }
 
-.textBody {
-  font-family: Nunito;
-  max-width: 500px;
-  text-align: center;
-  padding: 25px 25px;
-  margin: -20px 20px 0px;
-  font-size: 16px;
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: 0px 0px 7px #acacac;
-}
-
-/* Page 3 */
+/* Page 3 Definitions*/
 
 #page3 {
   display: none;
 }
-.mascotImage {
-  padding: 0px 0px 0px 0px;
-  width: 280px;
-  height: 280px;
-}
 
-#tab {
-  display: flex;
-  margin-bottom: -32px;
-}
-
+/* Tabs */
 .tabReasoning {
   font-family: Baloo;
   font-size: 16pt;
@@ -172,6 +212,12 @@ h1 {
   border-radius: 20px 20px 0px 0px;
   text-decoration: white underline;
   margin-right: 10px;
+}
+
+#tab {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: -32px;
 }
 
 #deductTab {
@@ -186,6 +232,37 @@ h1 {
   background-color: #af6262;
   height: 20px;
   margin-top: 45px;
+}
+
+#reasoningHeader {
+  margin: 2%;
+}
+
+/* Page 4 How to Play*/
+
+.howToPlayContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.howToPlayTextBox {
+  margin: 20px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  padding: 1.5em;
+  background-color: white;
+}
+
+#howtoPlayTopText {
+  margin: 0px;
+}
+.arrowImage {
+  width: 30px;
 }
 
 p,
@@ -213,71 +290,20 @@ h3 {
 
 .questionText {
   font-family: "Baloo";
-  margin: 2px;
+  margin: 0px;
   font-size: 21px;
 }
 
 .questionCount {
+  color: #8B8BA7;
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
   margin-top: 60px;
   position: relative;
-}
-/* General */
-
-.transition {
-  transition: ease-in-out 0.2s;
-}
-
-.btn {
-  font-family: "Baloo";
-  padding: 15px 55px;
-  color: white;
-  border-radius: 40px;
-  font-size: 22px;
-  border: transparent;
-  cursor: pointer;
-}
-
-.buttonBlue {
-  background-color: #4098d7;
-}
-.buttonBlue:hover {
-  background-color: #2471a8;
-}
-
-.buttonRed {
-  background-color: #f06364;
-}
-
-.buttonRed:hover {
-  background-color: rgb(99, 99, 99);
-}
-/* How to Play */
-
-.howToPlayContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.howToPlayTextBox {
-  margin: 20px;
-  text-align: center;
-  border-radius: 20px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  max-width: 400px;
-  padding: 1.5em;
-}
-
-.arrowImage {
-  width: 30px;
 }
 
 /* Game */
 
-/* General */
 #page5 {
   display: none;
   align-items: center;
@@ -355,7 +381,7 @@ h3 {
   grid-template-areas: "quit progress health";
   width: 100%;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 0px;
 }
 
 .quitBtn {
@@ -386,7 +412,7 @@ h3 {
 
 .blueBar,
 .backBar {
-  height: 10px;
+  height: 20px;
   position: absolute;
   background-color: #0074b5;
   z-index: 1;

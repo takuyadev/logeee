@@ -1,29 +1,35 @@
-
+// Header Navigation Bar
 var Slide_state = 1;
-
-
-
-function Slidebar(n){
-    Slide_state = n;
-    if (Slide_state===1){
-
-        document.querySelector("#navbar_bar").style.left = "3%";
-    }
-   else if (Slide_state ===2){
+function Slidebar(n) {
+  Slide_state = n;
+  if (Slide_state === 1) {
+    document.querySelector("#navbar_bar").style.left = "3%";
+  } else if (Slide_state === 2) {
     document.querySelector("#navbar_bar").style.left = "33%";
-    }
-
-
-   else if (Slide_state ===3){
+  } else if (Slide_state === 3) {
     document.querySelector("#navbar_bar").style.left = "66%";
+  }
+
+  //Page Change States
 }
-   
+function clearPages() {
+  document.querySelector("#page1").style.display = "none";
+  document.querySelector("#page2").style.display = "none";
+  document.querySelector("#page3").style.display = "none";
+  document.querySelector("#page4").style.display = "none";
+  document.querySelector("#page5").style.display = "none";
 }
 
 function nextPage(n) {
-    document.querySelector("#page"+ n).style.display = "none";
-    n = n + 1;
-    document.querySelector("#page"+ n).style.display = "flex";
+  clearPages();
+  Slidebar(n);
+  document.querySelector("#page" + n).style.display = "none";
+  n = n + 1;
+  document.querySelector("#page" + n).style.display = "flex";
+  document.querySelector("header").style.display = "block";
+  if (n == 5) {
+    document.querySelector("header").style.display = "none";
+  }
 }
 
 function pageQuestionPage() {
@@ -31,43 +37,44 @@ function pageQuestionPage() {
   document.querySelector(".questionPage").style.display = "flex";
 }
 
-
+//Tab State Change
 function inductiveTab() {
-    document.querySelector("#inductTab").style.padding = "10px 20px 35px";
-    document.querySelector("#inductTab").style.backgroundColor = "#F46969";
-    document.querySelector("#inductTab").style.textDecoration = "white underline";
-    document.querySelector("#inductTab").style.height = "25 px";
-    document.querySelector("#inductTab").style.marginTop = "22px";
-    document.querySelector("#inductTab").style.transition = "0.4s";
-    document.querySelector("#deductTab").style.padding = "5px 20px 15px";
-    document.querySelector("#deductTab").style.backgroundColor = "#AF6262"
-    document.querySelector("#deductTab").style.textDecoration = "none"
-    document.querySelector("#deductTab").style.height = "20px";
-    document.querySelector("#deductTab").style.marginTop = "45px";
-    document.querySelector("#Page3Heading").innerHTML = "Inductive Reasoning";
-    document.querySelector("#Page3SubHeading").innerHTML = "Opinions over Facts";
-    document.querySelector("#Page3Body").innerHTML = "Inductive Reasoning favours arguing opinions over facts. Instead of arguing with proven facts, you attempt to convince another person of your beleifs by providing a strong argument";
-    document.querySelector(".buttonGray").style.backgroundColor = "#4098D7";
-   
+  document.querySelector("#inductTab").style.padding = "10px 20px 35px";
+  document.querySelector("#inductTab").style.backgroundColor = "#F46969";
+  document.querySelector("#inductTab").style.textDecoration = "white underline";
+  document.querySelector("#inductTab").style.height = "25 px";
+  document.querySelector("#inductTab").style.marginTop = "22px";
+  document.querySelector("#inductTab").style.transition = "0.4s";
+  document.querySelector("#deductTab").style.padding = "5px 20px 15px";
+  document.querySelector("#deductTab").style.backgroundColor = "#AF6262";
+  document.querySelector("#deductTab").style.textDecoration = "none";
+  document.querySelector("#deductTab").style.height = "20px";
+  document.querySelector("#deductTab").style.marginTop = "45px";
+  document.querySelector("#reasoningHeader").innerHTML = "Inductive Reasoning";
+  document.querySelector("#reasoningSubHeading").innerHTML = "Opinions over Facts";
+  document.querySelector("#reasoningBody").innerHTML =
+    "Inductive Reasoning favours arguing opinions over facts. Instead of arguing with proven facts, you attempt to convince another person of your beleifs by providing a strong argument";
+  document.querySelector(".buttonGray").style.backgroundColor = "#4098D7";
 }
 
 function deductiveTab() {
-    document.querySelector("#inductTab").style.padding = "5px 20px 15px";
-    document.querySelector("#inductTab").style.backgroundColor = "#AF6262";
-    document.querySelector("#inductTab").style.height = "20 px";
-    document.querySelector("#inductTab").style.marginTop = "45px";
-    document.querySelector("#inductTab").style.textDecoration = "none";
-    document.querySelector("#deductTab").style.padding = "10px 20px 30px";
-    document.querySelector("#deductTab").style.backgroundColor = "#F46969"
-    document.querySelector("#deductTab").style.textDecoration = "white underline"
-    document.querySelector("#deductTab").style.height = "25px";
-    document.querySelector("#deductTab").style.marginTop = "22px";
-    document.querySelector("#deductTab").style.transition = "0.4s";
-    document.querySelector("#Page3Heading").innerHTML = "Deductive Reasoning";
-    document.querySelector("#Page3SubHeading").innerHTML = "Facts over Opinions";
-    document.querySelector("#Page3Body").innerHTML = "Deductive reasoning is when a person makes an arguement or decsion that is based on true facts. It is based on the idea that if the facts are true, then the conclusion must also be true"
+  document.querySelector("#inductTab").style.padding = "5px 20px 15px";
+  document.querySelector("#inductTab").style.backgroundColor = "#AF6262";
+  document.querySelector("#inductTab").style.height = "20 px";
+  document.querySelector("#inductTab").style.marginTop = "45px";
+  document.querySelector("#inductTab").style.textDecoration = "none";
+  document.querySelector("#deductTab").style.padding = "10px 20px 30px";
+  document.querySelector("#deductTab").style.backgroundColor = "#F46969";
+  document.querySelector("#deductTab").style.textDecoration = "white underline";
+  document.querySelector("#deductTab").style.height = "25px";
+  document.querySelector("#deductTab").style.marginTop = "22px";
+  document.querySelector("#deductTab").style.transition = "0.4s";
+  document.querySelector("#reasoningHeader").innerHTML = "Deductive Reasoning";
+  document.querySelector("#reasoningSubHeading").innerHTML = "Facts over Opinions";
+  document.querySelector("#reasoningBody").innerHTML =
+    "Deductive reasoning is when a person makes an arguement or decsion that is based on true facts. It is based on the idea that if the facts are true, then the conclusion must also be true";
 }
-
+//Game Questions
 var gameQuestions = [
   {
     statements: "Let's go to Kirby Cafe instead of Pokemon Cafe.",
@@ -202,8 +209,10 @@ function clearAnswer() {
   document.querySelector("#question3").style.border = "5px solid transparent";
   document.querySelector("#question4").style.border = "5px solid transparent";
 }
+
 function questionAnswer1() {
   clearAnswer();
+  document.querySelector(".confirm").style.backgroundColor = "#F46969";
   document.querySelector("#question1").style.border = "5px solid #F46969";
   varQuestionAnswer = gameQuestions[questionCounter].question1.answer;
   console.log(varQuestionAnswer);
@@ -211,6 +220,7 @@ function questionAnswer1() {
 
 function questionAnswer2() {
   clearAnswer();
+  document.querySelector(".confirm").style.backgroundColor = "#F46969";
   document.querySelector("#question2").style.border = "5px solid #F46969";
   varQuestionAnswer = gameQuestions[questionCounter].question2.answer;
   console.log(varQuestionAnswer);
@@ -220,12 +230,14 @@ function questionAnswer3() {
     varQuestionAnswer = true;
   }
   clearAnswer();
+  document.querySelector(".confirm").style.backgroundColor = "#F46969";
   document.querySelector("#question3").style.border = "5px solid #F46969";
   varQuestionAnswer = gameQuestions[questionCounter].question3.answer;
   console.log(varQuestionAnswer);
 }
 function questionAnswer4() {
   clearAnswer();
+  document.querySelector(".confirm").style.backgroundColor = "#F46969";
   document.querySelector("#question4").style.border = "5px solid #F46969";
   varQuestionAnswer = gameQuestions[questionCounter].question4.answer;
   console.log(varQuestionAnswer);
@@ -241,6 +253,7 @@ function initQuestion() {
     varQuestionAnswer = undefined;
     document.querySelector(".nextQuestionPage").style.display = "none";
     document.querySelector(".nextQuestionBtn").style.display = "none";
+    document.querySelector(".confirm").style.backgroundColor = "#B4B4B4";
     clearAnswer();
   }
 }
@@ -297,9 +310,3 @@ function confirm() {
     correctPageShow();
   }
 }
-
-function page4(){
-    document.querySelector(".questionPage").style.display = "none";
-    document.querySelector("#page4Content").style.display = "flex";
-  }
-

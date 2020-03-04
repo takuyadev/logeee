@@ -1,70 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Logeee</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logeee</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
 </head>
 <body>
-
-
-
-
   <div class="app">
     <div class="screen">
-              <header>  
-            <div class="navbar">
-                  <a id="navbar_intro" onclick="Slidebar(1)" href="#">Introduction</a>
-                  <a id="navbar_defi" onclick="Slidebar(2)"href="#">Definition</a>
-                  <a id="navbar_howto"onclick="Slidebar(3)" href="#">How To Play</a>
-                  
- 
-            </div>
-            <div class="slider">
-                    <span id="navbar_bar"></span>
-                    <span id="navbar_barback"></span>
-            </div>
-           
-            </header>
-    <!-- Page 1 Homepage -->
-    <div class="page" id="page1">
-      <h1>Logee</h1>
-        <p class="introText">A short game that teaches the fundementals of deductive and inductive reasoning</p>
-        <img class="mascotImage" src=http://placekitten.com/200/300/> 
-        <p class="buttonBlue btn" onclick="nextPage(1)">Lets Learn!</p>
-    </div>
-
-    <!-- Page 2 Intro -->
-    <div class="page" id="page2">
-        <img class="mascotImage" src=http://placekitten.com/200/300/> 
-        <h2>Why is Reasoning Important?</h2>
-        <p class="textBody">Everyday, we are faced with situations, both large and small, where we have to make choices and decisions to get through our day. As such, knowing how to reason is important, as it enables us to evaluate the situations we are in, and successfully respond to them to achieve the outcome we want</p>
-        <p class="buttonBlue btn" onclick="nextPage(2)">Next Page</p>
-    </div>
-
-    <!-- page 3a Deductive Reasoning -->
-    <div class="page" id="page3">
-        <h2>Deductive Reasoning</h2>
-        <img class="mascotImage" src=http://placekitten.com/200/300/> 
-        <h2>Facts Over Opinions</h2>
-        <p class="textBody"> Deductive reasoning is when a person makes an arguement or decsion that is based on true facts. It is based on the idea that if the facts are true, then the conclusion must also be true</p>
-        <div id="tab">
-            <p id="deductTab" class="tabReasoning" onclick="deductiveTab()">Deductive</p>
-            <p id="inductTab" class="tabReasoning"  onclick="inductiveTab()">Inductive</p>
+      <header>
+        <div class="navbar">
+          <a id="navbar_intro" onclick="Slidebar(1), nextPage(1)" href="#">Introduction</a>
+          <a id="navbar_defi" onclick="Slidebar(2), nextPage(2)" href="#">Definition</a>
+          <a id="navbar_howto" onclick="Slidebar(3), nextPage(3)" href="#">How To Play</a>
         </div>
-        <p class="btn buttonGray" onclick="nextPage(3)">Next Page</p>
-    </div>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Baloo|Nunito:400,600,900&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-      <!-- How to Play -->
+        <div class="slider">
+          <span id="navbar_bar"></span>
+          <span id="navbar_barback"></span>
+        </div>
+      </header>
+      <!-- Page 1 Homepage -->
+      <div class="page" id="page1">
+        <h1 class="pageTitle">Logee</h1>
+        <p class="introText">A short game that teaches the fundementals of deductive and inductive reasoning</p>
+        <img class="mascotImage" src=http://placekitten.com/200/300 />
+        <p class="buttonBlue btn" onclick="nextPage(1)">Lets Learn!</p>
+      </div>
+      <!-- Page 2 Intro -->
+      <div class="page" id="page2">
+        <h2 id="reasoningHeader">Introduction</h2>
+        <img class="mascotImage" src=http://placekitten.com/200/300 />
+        <h2>Why is Reasoning Important?</h2>
+        <p class="textBody">Everyday, we are faced with situations, both large and small, where we have to make choices
+          and decisions to get through our day. As such, knowing how to reason is important, as it enables us to
+          evaluate the situations we are in, and successfully respond to them to achieve the outcome we want</p>
+        <p class="buttonBlue btn" onclick="nextPage(2)">Next Page</p>
+      </div>
+      <!-- page 3a Deductive Reasoning -->
+      <div class="page" id="page3">
+        <h2 id="reasoningHeader">Deductive Reasoning</h2>
+        <img class="mascotImage" src=http://placekitten.com/200/300 />
+        <h2 id="reasoningSubHeading">Facts Over Opinions</h2>
+        <p class="textBody" id="reasoningBody"> Deductive reasoning is when a person makes an arguement or decsion that is based on true
+          facts. It is based on the idea that if the facts are true, then the conclusion must also be true</p>
+        <div id="tab">
+          <p id="deductTab" class="tabReasoning" onclick="deductiveTab()">Deductive</p>
+          <p id="inductTab" class="tabReasoning" onclick="inductiveTab()">Inductive</p>
+        </div>
+        <p class="btn nextPage buttonGray" onclick="nextPage(3)">Next Page</p>
+      </div>
+      <link rel="stylesheet" href="style.css" />
+      <link href="https://fonts.googleapis.com/css?family=Baloo|Nunito:400,600,900&display=swap" rel="stylesheet" />
+      </head>
+      <!-- page 4 How to Play -->
       <div class="page" id="page4">
-        <div class="howToPlayContainer">
-          <div class="howToPlayTextBox">
+        <div class="howToPlayContainer" >
+          <h2 id="howtoPlayTopText" >How to Play!</h2>
+          <div class="howToPlayTextBox" >
             <p>
               You will be presented with an argument, and <b>4 potential responses</b> to that arguement.
             </p>
@@ -72,60 +66,57 @@
           <img src="imgs/arrow.svg" alt="" class="arrowImage">
           <div class="howToPlayTextBox">
             <p>
-              Pick the response that best represents either <b>deductive or inductrive reasoning,</b> depending on what the
+              Pick the response that best represents either <b>deductive or inductrive reasoning,</b> depending on what
+              the
               question asks.
             </p>
           </div>
           <img src="imgs/arrow.svg" alt="" class="arrowImage">
           <div class="howToPlayTextBox">
             <p>
-              Once you have picked your choice, <b>hit the “Confirm” button.</b> If you are wrong 3 times, its a Game Over!
+              Once you have picked your choice, <b>hit the “Confirm” button.</b> If you are wrong 3 times, its a Game
+              Over!
             </p>
           </div>
           <button class="nextPageBtn btn buttonRed" onclick="nextPage(4)">Next Page</button>
         </div>
       </div>
-      <!-- End How to Play -->
-    <!-- Game Screen -->
-    <div class="nextQuestionPage">
+      <!-- Page 5 Game Screen -->
+      <div class="nextQuestionPage">
         <h1 class="result"></h1>
-      <p class="resultsDescription"></p>
-
-      <button class="nextQuestionBtn btn buttonRed" onclick="initQuestion()">Next Question</button>
-    </div>
-    <div class="incorrectPage">
-      
-      <p class="resultsDescription2"></p>
-      <h1 class="result2"></h1>
-      <button class="tryAgainButton btn buttonRed" onclick="tryAgain()">Try Again!</button>
-    </div>
-
-    <div class="page" id="page5">
-      <header class="statusHeader">
-        <div class="quitBtn transition" onclick="nextPage(3)">X</div>
-        <div class="progressBar">
-          <div class="blueBar transition"></div>
-          <div class="backBar transition"></div>
-          <p class="questionCount"></p>
-        </div>
-        <p class="healthStatus">3/3</p>
-      </header>
-      <p class="questionText">Select the answer that best represents</p>
-      <p class="reasoning"></p>
-      <p class="questionText">and then confirm your answer.</p>
-      <div class="image"></div>
-      <p class="statement"></p>
-      <button class="questionsBtn transition" id="question1" onclick="questionAnswer1()"></button>
-      <button class="questionsBtn transition" id="question2" onclick="questionAnswer2()"></button>
-      <button class="questionsBtn transition" id="question3" onclick="questionAnswer3()"></button>
-      <button class="questionsBtn transition" id="question4" onclick="questionAnswer4()"></button>
-      <button class="confirm btn buttonBlue transition" onclick="confirm()">Confirm</button>
-      <script src="app.js"></script>
+        <p class="resultsDescription"></p>
+        <button class="nextQuestionBtn btn buttonRed" onclick="initQuestion()">Next Question</button>
+      </div>
+      <div class="incorrectPage">
+        <p class="resultsDescription2"></p>
+        <h1 class="result2"></h1>
+        <button class="tryAgainButton btn buttonRed" onclick="tryAgain()">Try Again!</button>
+      </div>
+      <div class="page" id="page5">
+        <header class="statusHeader">
+          <div class="quitBtn transition" onclick="nextPage(3)">X</div>
+          <div class="progressBar">
+            <div class="blueBar transition"></div>
+            <div class="backBar transition"></div>
+            <p class="questionCount"></p>
+          </div>
+          <p class="healthStatus">3/3</p>
+        </header>
+        <p class="questionText">Select the answer that best represents</p>
+        <p class="reasoning"></p>
+        <p class="questionText">and then confirm your answer.</p>
+        <img class="mascotImage" src=http://placekitten.com/200/300 />
+        <p class="statement"></p>
+        <button class="questionsBtn transition" id="question1" onclick="questionAnswer1()"></button>
+        <button class="questionsBtn transition" id="question2" onclick="questionAnswer2()"></button>
+        <button class="questionsBtn transition" id="question3" onclick="questionAnswer3()"></button>
+        <button class="questionsBtn transition" id="question4" onclick="questionAnswer4()"></button>
+        <button class="btn confirm buttonGray transition" onclick="confirm()">Confirm</button>
+        <script src="app.js"></script>
+      </div>
     </div>
   </div>
-</div>
-    <!-- End Game Screen -->
-    <script src="app.js"></script>
- 
-  </body>
+  <!-- End Game Screen -->
+  <script src="app.js"></script>
+</body>
 </html>
