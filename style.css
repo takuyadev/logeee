@@ -131,12 +131,12 @@ body {
   border-radius: 40px;
   font-size: 22px;
   border: transparent;
-  cursor: pointer;
   margin: 40px;
 }
 
 .buttonBlue {
   background-color: #4098d7;
+  cursor: pointer;
 }
 .buttonBlue:hover {
   background-color: #2471a8;
@@ -170,13 +170,15 @@ h6 {
 }
 
 h2 {
-  margin-bottom: 1.5em;
+  margin-bottom: -0.2em;
 }
 
 /* page 1 Homepage*/
 
 .introText {
   text-align: center;
+  max-width: 430px;
+  font-size: 15pt;
 }
 .pageTitle{
   font-size: 6em;
@@ -198,9 +200,17 @@ h2 {
   display: none;
 }
 
+#page2Button {
+  margin-top: 0.8em;
+}
+
 /* Page 3 Definitions*/
 
 #page3 {
+  display: none;
+}
+
+#nextPageBlue {
   display: none;
 }
 
@@ -212,6 +222,7 @@ h2 {
   border-radius: 20px 20px 0px 0px;
   text-decoration: white underline;
   margin-right: 10px;
+  cursor: pointer
 }
 
 #tab {
@@ -231,7 +242,7 @@ h2 {
   padding: 5px 20px 15px;
   background-color: #af6262;
   height: 20px;
-  margin-top: 45px;
+  margin-top: 45.5px;
 }
 
 #reasoningHeader {

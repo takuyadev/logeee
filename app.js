@@ -48,20 +48,24 @@ function inductiveTab() {
   document.querySelector("#deductTab").style.padding = "5px 20px 15px";
   document.querySelector("#deductTab").style.backgroundColor = "#AF6262";
   document.querySelector("#deductTab").style.textDecoration = "none";
-  document.querySelector("#deductTab").style.height = "20px";
+  document.querySelector("#deductTab").style.height = "22px";
   document.querySelector("#deductTab").style.marginTop = "45px";
+  document.querySelector("#deductTab").style.transition = "0.4s";
   document.querySelector("#reasoningHeader").innerHTML = "Inductive Reasoning";
   document.querySelector("#reasoningSubHeading").innerHTML = "Opinions over Facts";
   document.querySelector("#reasoningBody").innerHTML =
-    "Inductive Reasoning favours arguing opinions over facts. Instead of arguing with proven facts, you attempt to convince another person of your beleifs by providing a strong argument";
+    "Inductive reasoning is when, instead of arguing with facts, you attempt to convince someone of your beleifs by providing strong opinions that are likely true. <br/> <br/>  While inductive arguments are weaker, as they don't use proven facts, it is rare that we know all the details in every situation. Thus being able to provide convincing points is vital to achieving the outcomes we want";
   document.querySelector(".buttonGray").style.backgroundColor = "#4098D7";
+  document.querySelector("#nextPageBlue").style.display = "block";
+  document.querySelector("#nextPageGray").style.display = "none";
 }
 
 function deductiveTab() {
+  document.querySelector("#nextPageBlue").style.display = "none";
   document.querySelector("#inductTab").style.padding = "5px 20px 15px";
   document.querySelector("#inductTab").style.backgroundColor = "#AF6262";
-  document.querySelector("#inductTab").style.height = "20 px";
-  document.querySelector("#inductTab").style.marginTop = "45px";
+  document.querySelector("#inductTab").style.height = "23 px";
+  document.querySelector("#inductTab").style.marginTop = "47px";
   document.querySelector("#inductTab").style.textDecoration = "none";
   document.querySelector("#deductTab").style.padding = "10px 20px 30px";
   document.querySelector("#deductTab").style.backgroundColor = "#F46969";
@@ -72,8 +76,11 @@ function deductiveTab() {
   document.querySelector("#reasoningHeader").innerHTML = "Deductive Reasoning";
   document.querySelector("#reasoningSubHeading").innerHTML = "Facts over Opinions";
   document.querySelector("#reasoningBody").innerHTML =
-    "Deductive reasoning is when a person makes an arguement or decsion that is based on true facts. It is based on the idea that if the facts are true, then the conclusion must also be true";
-}
+    "Deductive reasoning is when a person makes an arguement or decsion by using true facts. <br/> <br/> Deductive reasoning is harder to disprove, as it uses indisputable facts, however, it is a more difficult reasoning to use in everyday life, as it requires you to know all the relevent details of the siutation to successfully argue your point.";
+  document.querySelector("#nextPageBlue").style.display = "block";
+  }
+
+
 //Game Questions
 var gameQuestions = [
   {
