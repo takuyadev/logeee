@@ -79,6 +79,7 @@ var gameQuestions = [
   {
     statements: "Let's go to Kirby Cafe instead of Pokemon Cafe.",
     reasoning: "deductive reasoning",
+    yesorno: "Yes, because...",
     question1: {
       questionText: "The service at Pokemon Cafe is better",
       answer: false
@@ -97,78 +98,86 @@ var gameQuestions = [
     }
   },
   {
-    statements: "Let's go to Pokemon Cafe instead of Kirby Cafe",
+    statements: "Should I get the new Nintendo Switch Console over the PS4?",
+    reasoning: "deductive reasoning",
+    yesorno: "Yes, because...",
     question1: {
-      questionText: "The Pokemon Cafe is closed",
+      questionText: "It is portable, so we can play anywhere.",
       answer: true
     },
     question2: {
-      questionText: "The service at Kirby Cafe is better",
+      questionText: "I like the games on it better.",
       answer: false
     },
     question3: {
-      questionText: "The decor at the Kirby Cafe is better",
+      questionText: "The controller feels more comfortable.",
       answer: false
     },
     question4: {
-      questionText: "The food at Kirby Cafe is better",
+      questionText: "The neon colors on it are better.",
       answer: false
     }
   },
   {
-    statements: "Let's go to Pokemon Cafe instead of Kirby Cafe",
+    statements: "Cmon, we should play some kickball instead of baseball.",
+    reasoning: "deductive reasoning",
+    yesorno: "No, because...",
     question1: {
-      questionText: "The Pokemon Cafe is closed",
-      answer: true
-    },
-    question2: {
-      questionText: "The service at Kirby Cafe is better",
+      questionText: "My feet HURT!",
       answer: false
     },
+    question2: {
+      questionText: "We only have baseball balls right now.",
+      answer: true
+    },
     question3: {
-      questionText: "The decor at the Kirby Cafe is better",
+      questionText: "Kickball is more competitive.",
       answer: false
     },
     question4: {
-      questionText: "The food at Kirby Cafe is better",
+      questionText: "Kicking is more satisfying than throwing.",
       answer: false
     }
   },
   {
-    statements: "Let's go to Pokemon Cafe instead of Kirby Cafe",
+    statements: "I think we should travel to Disneyland in July?",
+    reasoning: "inductive reasoning",
+    yesorno: "No, because...",
     question1: {
-      questionText: "The Pokemon Cafe is closed",
-      answer: true
+      questionText: "All the flights for that month are booked up",
+      answer: false
     },
     question2: {
-      questionText: "The service at Kirby Cafe is better",
+      questionText: "There are no hotels in the area for us to stay at.",
       answer: false
     },
     question3: {
-      questionText: "The decor at the Kirby Cafe is better",
+      questionText: "Our current budget cannot afford the trip this year.",
       answer: false
     },
     question4: {
-      questionText: "The food at Kirby Cafe is better",
-      answer: false
+      questionText: "Mickey Mouse scares me...",
+      answer: true
     }
   },
   {
-    statements: "Let's go to Pokemon Cafe instead of Kirby Cafe",
+    statements: "Should we go see the new Marvel movie this weekend?",
+    reasoning: "inductive reasoning",
+    yesorno: "Yes, because...",
     question1: {
-      questionText: "The Pokemon Cafe is closed",
-      answer: true
-    },
-    question2: {
-      questionText: "The service at Kirby Cafe is better",
+      questionText: "The movie is playing at a time when we are both available. ",
       answer: false
     },
+    question2: {
+      questionText: "Marvel movies are the best!",
+      answer: true
+    },
     question3: {
-      questionText: "The decor at the Kirby Cafe is better",
+      questionText: "It is playing at our local cinema, so it will be easiest to go to.",
       answer: false
     },
     question4: {
-      questionText: "The food at Kirby Cafe is better",
+      questionText: "The movie has been getting good reviews from critics. ",
       answer: false
     }
   }
@@ -182,22 +191,23 @@ var practiceQuestion = 1;
 // Start Game
 startGame();
 function startGame() {
-  document.querySelector(".reasoning").innerText = gameQuestions[questionCounter].reasoning;
-  document.querySelector(".statement").innerText = gameQuestions[questionCounter].statements;
-  document.querySelector("#question1").innerText = gameQuestions[questionCounter].question1.questionText;
-  document.querySelector("#question2").innerText = gameQuestions[questionCounter].question2.questionText;
-  document.querySelector("#question3").innerText = gameQuestions[questionCounter].question3.questionText;
-  document.querySelector("#question4").innerText = gameQuestions[questionCounter].question4.questionText;
   if (practiceQuestion === 1) {
     document.querySelector(".questionCount").innerText = "Practice Question";
-    document.querySelector(".reasoning").innerText = gameQuestions[questionCounter].reasoning;
-    document.querySelector(".statement").innerText = gameQuestions[questionCounter].statements;
+    document.querySelector(".reasoning").innerText = "Practice!";
+    document.querySelector(".statement").innerText = "Practice!";
     document.querySelector("#question1").innerText = "Practice";
     document.querySelector("#question2").innerText = "Practice";
     document.querySelector("#question3").innerText = "Click on me!";
     document.querySelector("#question4").innerText = "Practice";
   } else if (practiceQuestion === 0) {
+    console.log(questionCounter);
     document.querySelector(".questionCount").innerText = "Question " + questionCounterPage;
+    document.querySelector(".reasoning").innerText = gameQuestions[questionCounter].reasoning;
+    document.querySelector(".statement").innerText = gameQuestions[questionCounter].statements;
+    document.querySelector("#question1").innerText = gameQuestions[questionCounter].question1.questionText;
+    document.querySelector("#question2").innerText = gameQuestions[questionCounter].question2.questionText;
+    document.querySelector("#question3").innerText = gameQuestions[questionCounter].question3.questionText;
+    document.querySelector("#question4").innerText = gameQuestions[questionCounter].question4.questionText;
   }
 }
 
@@ -226,7 +236,7 @@ function questionAnswer2() {
   console.log(varQuestionAnswer);
 }
 function questionAnswer3() {
-  if (practiceQuestion === 1) {
+  if (practiceQuestion == 1) {
     varQuestionAnswer = true;
   }
   clearAnswer();
@@ -248,14 +258,20 @@ function initQuestion() {
   if (progressBarStatus == 100) {
     document.write("Finish");
     practiceQuestion = 1;
-  } else {
-    startGame();
-    varQuestionAnswer = undefined;
-    document.querySelector(".nextQuestionPage").style.display = "none";
-    document.querySelector(".nextQuestionBtn").style.display = "none";
-    document.querySelector(".confirm").style.backgroundColor = "#B4B4B4";
-    clearAnswer();
   }
+  if (practiceQuestion == 1) {
+    gameQuestions.sort(function(a, b) {
+      return 0.5 - Math.random();
+    });
+    practiceQuestion = 0;
+  }
+
+  startGame();
+  varQuestionAnswer = undefined;
+  document.querySelector(".nextQuestionPage").style.display = "none";
+  document.querySelector(".nextQuestionBtn").style.display = "none";
+  document.querySelector(".confirm").style.backgroundColor = "#B4B4B4";
+  clearAnswer();
 }
 
 //Try Again
@@ -291,14 +307,13 @@ function correctPageShow() {
     document.querySelector(".result").innerHTML = "You got it!";
     document.querySelector(".resultsDescription").innerHTML =
       "You're ready to go! Beat those questions, I know you can do it!";
-    practiceQuestion = 0;
   } else {
     document.querySelector(".result").innerHTML = "You got it!";
     document.querySelector(".resultsDescription").innerHTML = "Way to go champ!";
     progressBarStatus = progressBarStatus + 20;
     document.querySelector(".blueBar").style.width = progressBarStatus + "%";
-    ++questionCounter;
     ++questionCounterPage;
+    ++questionCounter;
   }
 }
 
