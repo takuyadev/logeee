@@ -79,7 +79,7 @@
               Over!
             </p>
           </div>
-          <button class="nextPageBtn btn buttonRed" onclick="nextPage(4)">Next Page</button>
+          <button class="nextPageBtn btn buttonRed" onclick="nextPage(4), startGame()">Next Page</button>
         </div>
       </div>
       <!-- Page 5 Game Screen -->
@@ -95,7 +95,7 @@
       </div>
       <div class="page" id="page5">
         <header class="statusHeader">
-          <div class="quitBtn transition" onclick="nextPage(3)">X</div>
+          <div class="quitBtn transition" onclick="nextPage(3), clearAnswer()">X</div>
           <div class="progressBar">
             <div class="blueBar transition"></div>
             <div class="backBar transition"></div>
@@ -115,9 +115,23 @@
         <button class="btn confirm buttonGray transition" onclick="confirm()">Confirm</button>
         <script src="app.js"></script>
       </div>
+        <div id="gameOver" class="page" >
+            <h1 class="gameOverText">OOPS</h1>
+            <p>You can do this next time, Champ</p>
+            <img class="mascotImage" src=http://placekitten.com/200/300 />
+            <button class="btn buttonBlue marginAuto" onclick="nextPage(4), restartGame(2), clearAnswer()">Try again</button>
+            <button class="btn buttonBlue marginAuto" onclick="nextPage(2),  restartGame()">Main menu</button>
+    </div>
+    <div id="congratulations" class="page" >
+            <h1 class="congratulationText">Congratulations!</h1>
+            <p>LET'S GO TEAM</p>
+            <img class="mascotImage" src=http://placekitten.com/200/300 />
+            <button class="btn buttonBlue marginAuto" onclick="nextPage(4), restartGame(2), clearAnswer()">Try again</button>
+            <button class="btn buttonBlue marginAuto" onclick="nextPage(2), restartGame()" >Main menu</button>
+    </div>
     </div>
   </div>
   <!-- End Game Screen -->
-  <script src="app.js"></script>
+  <script src="app.js" ></script>
 </body>
 </html>
