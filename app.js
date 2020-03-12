@@ -292,17 +292,6 @@ function initQuestion() {
   document.querySelector(".nextQuestionPage").style.display = "none";
   document.querySelector(".nextQuestionBtn").style.display = "none";
   document.querySelector(".confirm").style.backgroundColor = "#B4B4B4";
-
-  if (progressBarStatus < 100) {
-    console.log(practiceQuestion);
-    startGame();
-    varQuestionAnswer = undefined;
-    clearAnswer();
-  }
-  if (progressBarStatus == 100) {
-    document.querySelector("#page5").style.display = "none";
-    document.querySelector("#congratulations").style.display = "flex";
-  }
   if (practiceQuestion == 1) {
     randomizer();
     practiceQuestion = 0;
