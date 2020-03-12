@@ -31,10 +31,10 @@
       </div>
       <!-- Page 2 Intro -->
       <div class="page" id="page2">
-        <h2 id="reasoningHeader">Introduction</h2>
+        <h2 id="introHeader">Introduction</h2>
         <img class="mascotImage" src=http://placekitten.com/200/300 />
         <h2>Why is Reasoning Important?</h2>
-        <p class="howToPlayTextBox">Everyday, we are faced with situations where we have to make decisions, or make a point. Reasoning is the act of constructing thoughts into valid arguments or reasons for why one decsion should be made over another. As such, knowing how to reason properly is important to
+        <p class="howToPlayTextBox">Every day, we are faced with situations where we have to make decisions, or make a point. Reasoning is the act of constructing thoughts into valid arguments or reasons for why one decsion should be made over another. As such, knowing how to reason properly is important to
           evaluate the situations we are in, and successfully respond to them to achieve the outcomes we want.</p>
         <p class="buttonBlue btn" id="page2Button" onclick="nextPage(2)">Next Page</p>
       </div>
@@ -67,7 +67,7 @@
           <img src="imgs/arrow.svg" alt="" class="arrowImage">
           <div class="howToPlayTextBox">
             <p>
-              Pick the response that best represents either <b>deductive or inductrive reasoning,</b> depending on what
+              Pick the response that best represents either <b>deductive or inductive reasoning,</b> depending on what
               the
               question asks.
             </p>
@@ -117,14 +117,15 @@
       </div>
         <div id="gameOver" class="page" >
             <h1 class="gameOverText">OOPS</h1>
-            <p>You can do this next time, Champ</p>
+            <p id="gameOverBodyText">You can do this next time, Champ! You can either try again, or return to the main menu to refresh yourself on deductve and inductive reasoning</p>
             <img class="mascotImage" src=http://placekitten.com/200/300 />
             <button class="btn buttonBlue marginAuto" onclick="nextPage(4), restartGame(2), clearAnswer()">Try again</button>
             <button class="btn buttonBlue marginAuto" onclick="nextPage(2),  restartGame()">Main menu</button>
     </div>
     <div id="congratulations" class="page" >
             <h1 class="congratulationText">Congrats!</h1>
-            <p>LET'S GO TEAM</p>
+            <p>LET'S GO TEAM!!!!</p>
+            <p id="congratsText">Thank you for trying our game! Feel free to try the game again, or return to the main menu to revieiw deductive and inductive reasoning</p>
             <img class="mascotImage" src=http://placekitten.com/200/300 />
             <button class="btn buttonBlue marginAuto" onclick="nextPage(4), restartGame(2), clearAnswer()">Try again</button>
             <button class="btn buttonBlue marginAuto" onclick="nextPage(2), restartGame()" >Main menu</button>

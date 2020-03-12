@@ -152,10 +152,12 @@ body {
 
 .buttonRed {
   background-color: #f06364;
+  cursor: pointer;
 }
 
 .buttonRed:hover {
   background-color: rgb(99, 99, 99);
+  cursor: pointer;
 }
 .buttonGray {
   font-family: Baloo;
@@ -211,6 +213,11 @@ p {
   display: none;
 }
 
+#introHeader {
+  margin: 2%; 
+  font-size: 22pt;
+}
+
 #page2Button {
   margin-top: 0.8em;
 }
@@ -257,7 +264,8 @@ p {
 }
 
 #reasoningHeader {
-  margin: 2%;
+  margin: 2%; 
+  font-size: 22pt;
 }
 
 /* Page 4 How to Play*/
@@ -282,6 +290,7 @@ p {
 
 #howtoPlayTopText {
   margin: 0px;
+  font-size: 22pt;
 }
 .arrowImage {
   width: 30px;
@@ -484,6 +493,10 @@ h3 {
   color: #0074b5;
 }
 
+#gameOverBodyText {
+  padding: 5px 30px; 
+}
+
 #congratulations {
   display: none;
 }
@@ -497,6 +510,10 @@ h3 {
 
 .congratulationText {
   color: #51c147;
+}
+
+#congratsText {
+  padding: 5px 30px; 
 }
 
 @media (max-width: 500px) {

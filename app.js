@@ -57,7 +57,7 @@ function inductiveTab() {
   document.querySelector("#reasoningSubHeading").innerHTML =
     "Opinions over Facts";
   document.querySelector("#reasoningBody").innerHTML =
-    "Inductive reasoning is when, instead of arguing with facts, you attempt to convince someone of your beleifs by providing strong opinions that are likely true. <br/> <br/>  While inductive arguments are weaker, as they don't use proven facts, it is rare that we know all the details in every situation. Thus being able to provide convincing points is vital to achieving the outcomes we want";
+    "Inductive reasoning is when, instead of arguing with facts, you attempt to convince someone of your beleifs by providing strong opinions that are likely true. <br/> <br/>  While inductive arguments are weaker, as they don't use proven facts, it is rare that we know all the details in every situation. Thus being able to formulate convincing points is vital to winning arguments";
   document.querySelector(".buttonGray").style.backgroundColor = "#4098D7";
   document.querySelector("#nextPageBlue").style.display = "block";
   document.querySelector("#nextPageGray").style.display = "none";
@@ -112,7 +112,7 @@ var gameQuestions = [
     reasoning: "deductive reasoning",
     yesorno: "Yes, because...",
     question1: {
-      questionText: "It is portable, so we can play anywhere.",
+      questionText: "It is portable, so we can use it anywhere.",
       answer: true
     },
     question2: {
@@ -185,7 +185,7 @@ var gameQuestions = [
     },
     question3: {
       questionText:
-        "It is playing at our local cinema, so it will be easiest to go to.",
+        "It is playing at our local cinema, so it will be easy to go to.",
       answer: false
     },
     question4: {
@@ -326,7 +326,7 @@ function incorrectPageShow() {
   if (practiceQuestion == 1) {
     document.querySelector(".result2").innerHTML = "Oops!";
     document.querySelector(".resultsDescription2").innerHTML =
-      "Try hovering over the <u> underlined </u> word to see what the definitions are again!";
+      "Try hovering over the <u> underlined </u> word to see what the definition is again!";
   } else {
     document.querySelector(".result2").innerHTML = "Oops!";
     document.querySelector(".resultsDescription2").innerHTML =
