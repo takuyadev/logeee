@@ -314,8 +314,12 @@ h3 {
   font-family: "Baloo";
   margin: 0px;
   font-size: 21px;
+  line-height: 104.4%;
 }
 
+.reasoning {
+  line-height: 104.4%;
+}
 .questionCount {
   color: #8b8ba7;
   text-align: center;
