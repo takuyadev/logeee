@@ -52,7 +52,8 @@ function inductiveTab() {
   document.querySelector("#deductTab").style.marginTop = "45px";
   document.querySelector("#deductTab").style.transition = "0.4s";
   document.querySelector("#reasoningHeader").innerHTML = "Inductive Reasoning";
-  document.querySelector("#reasoningSubHeading").innerHTML = "Opinions over Facts";
+  document.querySelector("#reasoningSubHeading").innerHTML =
+    "Opinions over Facts";
   document.querySelector("#reasoningBody").innerHTML =
     "Inductive reasoning is when, instead of arguing with facts, you attempt to convince someone of your beleifs by providing strong opinions that are likely true. <br/> <br/>  While inductive arguments are weaker, as they don't use proven facts, it is rare that we know all the details in every situation. Thus being able to provide convincing points is vital to achieving the outcomes we want";
   document.querySelector(".buttonGray").style.backgroundColor = "#4098D7";
@@ -74,12 +75,12 @@ function deductiveTab() {
   document.querySelector("#deductTab").style.marginTop = "22px";
   document.querySelector("#deductTab").style.transition = "0.4s";
   document.querySelector("#reasoningHeader").innerHTML = "Deductive Reasoning";
-  document.querySelector("#reasoningSubHeading").innerHTML = "Facts over Opinions";
+  document.querySelector("#reasoningSubHeading").innerHTML =
+    "Facts over Opinions";
   document.querySelector("#reasoningBody").innerHTML =
     "Deductive reasoning is when a person makes an arguement or decsion by using true facts. <br/> <br/> Deductive reasoning is harder to disprove, as it uses indisputable facts, however, it is a more difficult reasoning to use in everyday life, as it requires you to know all the relevent details of the siutation to successfully argue your point.";
   document.querySelector("#nextPageBlue").style.display = "block";
-  }
-
+}
 
 //Game Questions
 var gameQuestions = [
@@ -172,7 +173,8 @@ var gameQuestions = [
     reasoning: "inductive reasoning",
     yesorno: "Yes, because...",
     question1: {
-      questionText: "The movie is playing at a time when we are both available. ",
+      questionText:
+        "The movie is playing at a time when we are both available. ",
       answer: false
     },
     question2: {
@@ -180,7 +182,8 @@ var gameQuestions = [
       answer: true
     },
     question3: {
-      questionText: "It is playing at our local cinema, so it will be easiest to go to.",
+      questionText:
+        "It is playing at our local cinema, so it will be easiest to go to.",
       answer: false
     },
     question4: {
@@ -194,10 +197,41 @@ var progressBarStatus = 0;
 var healthStatus = 3;
 var questionCounterPage = 1;
 var practiceQuestion = 1;
+var playedBefore = false;
 
+function restartGame() {
+  questionCounter = 0;
+  progressBarStatus = 0;
+  healthStatus = 3;
+  questionCounterPage = 1;
+  document.querySelector(".healthStatus").innerHTML = healthStatus + "/3";
+  progressBarStatus = progressBarStatus;
+  document.querySelector(".blueBar").style.width = progressBarStatus + "%";
+  randomizer();
+  startGame();
+}
+
+function randomizer() {
+  gameQuestions.sort(function(a, b) {
+    return 0.5 - Math.random();
+  });
+}
 // Start Game
-startGame();
 function startGame() {
+  document.querySelector(".questionCount").innerText =
+    "Question " + questionCounterPage;
+  document.querySelector(".reasoning").innerText =
+    gameQuestions[questionCounter].reasoning;
+  document.querySelector(".statement").innerText =
+    gameQuestions[questionCounter].statements;
+  document.querySelector("#question1").innerText =
+    gameQuestions[questionCounter].question1.questionText;
+  document.querySelector("#question2").innerText =
+    gameQuestions[questionCounter].question2.questionText;
+  document.querySelector("#question3").innerText =
+    gameQuestions[questionCounter].question3.questionText;
+  document.querySelector("#question4").innerText =
+    gameQuestions[questionCounter].question4.questionText;
   if (practiceQuestion === 1) {
     document.querySelector(".questionCount").innerText = "Practice Question";
     document.querySelector(".reasoning").innerText = "Practice!";
@@ -206,15 +240,6 @@ function startGame() {
     document.querySelector("#question2").innerText = "Practice";
     document.querySelector("#question3").innerText = "Click on me!";
     document.querySelector("#question4").innerText = "Practice";
-  } else if (practiceQuestion === 0) {
-    console.log(questionCounter);
-    document.querySelector(".questionCount").innerText = "Question " + questionCounterPage;
-    document.querySelector(".reasoning").innerText = gameQuestions[questionCounter].reasoning;
-    document.querySelector(".statement").innerText = gameQuestions[questionCounter].statements;
-    document.querySelector("#question1").innerText = gameQuestions[questionCounter].question1.questionText;
-    document.querySelector("#question2").innerText = gameQuestions[questionCounter].question2.questionText;
-    document.querySelector("#question3").innerText = gameQuestions[questionCounter].question3.questionText;
-    document.querySelector("#question4").innerText = gameQuestions[questionCounter].question4.questionText;
   }
 }
 
@@ -262,23 +287,24 @@ function questionAnswer4() {
 
 // Next Question
 function initQuestion() {
-  if (progressBarStatus == 100) {
-    document.write("Finish");
-    practiceQuestion = 1;
-  }
-  if (practiceQuestion == 1) {
-    gameQuestions.sort(function(a, b) {
-      return 0.5 - Math.random();
-    });
-    practiceQuestion = 0;
-  }
-
-  startGame();
-  varQuestionAnswer = undefined;
   document.querySelector(".nextQuestionPage").style.display = "none";
   document.querySelector(".nextQuestionBtn").style.display = "none";
   document.querySelector(".confirm").style.backgroundColor = "#B4B4B4";
-  clearAnswer();
+  if (progressBarStatus < 100) {
+    console.log(practiceQuestion);
+    startGame();
+    varQuestionAnswer = undefined;
+    clearAnswer();
+  }
+  if (progressBarStatus == 100) {
+    document.querySelector("#page5").style.display = "none";
+    document.querySelector("#congratulations").style.display = "flex";
+  }
+  if (practiceQuestion == 1) {
+    randomizer();
+    practiceQuestion = 0;
+    startGame();
+  }
 }
 
 //Try Again
@@ -286,8 +312,8 @@ function tryAgain() {
   document.querySelector(".incorrectPage").style.display = "none";
   document.querySelector(".tryAgainButton").style.display = "none";
   if (healthStatus == 0) {
-    document.querySelector(".questionPage").style.display = "none";
-    document.querySelector(".#tryAgainPage").style.display = "flex";
+    document.querySelector("#page5").style.display = "none";
+    document.querySelector("#gameOver").style.display = "flex";
   }
 }
 
@@ -316,7 +342,8 @@ function correctPageShow() {
       "You're ready to go! Beat those questions, I know you can do it!";
   } else {
     document.querySelector(".result").innerHTML = "You got it!";
-    document.querySelector(".resultsDescription").innerHTML = "Way to go champ!";
+    document.querySelector(".resultsDescription").innerHTML =
+      "Way to go champ!";
     progressBarStatus = progressBarStatus + 20;
     document.querySelector(".blueBar").style.width = progressBarStatus + "%";
     ++questionCounterPage;
