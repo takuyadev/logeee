@@ -27,6 +27,8 @@ function nextPage(n) {
   n = n + 1;
   document.querySelector("#page" + n).style.display = "flex";
   document.querySelector("header").style.display = "block";
+  document.querySelector("#gameOver").style.display = "none";
+  document.querySelector("#congratulations").style.display = "none";
   if (n == 5) {
     document.querySelector("header").style.display = "none";
   }
@@ -290,6 +292,7 @@ function initQuestion() {
   document.querySelector(".nextQuestionPage").style.display = "none";
   document.querySelector(".nextQuestionBtn").style.display = "none";
   document.querySelector(".confirm").style.backgroundColor = "#B4B4B4";
+
   if (progressBarStatus < 100) {
     console.log(practiceQuestion);
     startGame();
