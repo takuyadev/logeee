@@ -192,6 +192,69 @@ var gameQuestions = [
       questionText: "The movie has been getting good reviews from critics. ",
       answer: false
     }
+  },
+  {
+    statements: "Should we buy cake or ice cream for dessert tonight?",
+    reasoning: "inductive reasoning",
+    yesorno: "Choose the best answer!",
+    question1: {
+      questionText: "Cake, because the ice cream will melt before we get home.",
+      answer: false
+    },
+    question2: {
+      questionText: "Ice cream, because I am allergic to flour. ",
+      answer: false
+    },
+    question3: {
+      questionText: "Cake, because ice cream is too cold to eat. ",
+      answer: true
+    },
+    question4: {
+      questionText: "Ice cream, because all the cakes are sold out.",
+      answer: false
+    }
+  },
+  {
+    statements: "Should we go to the aquarium today! ",
+    reasoning: "deductive reasoning",
+    yesorno: "Yes, because...",
+    question1: {
+      questionText: "Sea animals are more interesting than land animals.",
+      answer: false
+    },
+    question2: {
+      questionText: "The gift shop has amazing stuff in it to buy. ",
+      answer: false
+    },
+    question3: {
+      questionText: "They have sea otters, and sea otters are so cute.",
+      answer: false
+    },
+    question4: {
+      questionText: "We get to see and learn about aquatic animals.",
+      answer: true
+    }
+  },
+  {
+    statements: "Apples are much better than oranges.",
+    reasoning: "deductive reasoning",
+    yesorno: "No, because...",
+    question1: {
+      questionText: "The colour orange is the nicest colour",
+      answer: false
+    },
+    question2: {
+      questionText: "I like that it shares the same name as a colour.  ",
+      answer: false
+    },
+    question3: {
+      questionText: "Oranges are more tasty.",
+      answer: false
+    },
+    question4: {
+      questionText: "Oranges are a good source of Vitamin C.",
+      answer: true
+    }
   }
 ];
 var questionCounter = 0;
@@ -209,6 +272,7 @@ function restartGame() {
   document.querySelector(".healthStatus").innerHTML = healthStatus + "/3";
   progressBarStatus = progressBarStatus;
   document.querySelector(".blueBar").style.width = progressBarStatus + "%";
+  document.querySelector(".tryAgainButton").innerText = "Try Again!";
   randomizer();
   startGame();
 }
@@ -226,6 +290,8 @@ function startGame() {
     gameQuestions[questionCounter].reasoning;
   document.querySelector(".statement").innerText =
     gameQuestions[questionCounter].statements;
+  document.querySelector(".yesOrNo").innerText =
+    gameQuestions[questionCounter].yesorno;
   document.querySelector("#question1").innerText =
     gameQuestions[questionCounter].question1.questionText;
   document.querySelector("#question2").innerText =
@@ -236,18 +302,26 @@ function startGame() {
     gameQuestions[questionCounter].question4.questionText;
   if (practiceQuestion === 1) {
     document.querySelector(".questionCount").innerText = "Practice Question";
-    document.querySelector(".reasoning").innerText = "Practice!";
-    document.querySelector(".statement").innerText = "Practice!";
-    document.querySelector("#question1").innerText = "Practice";
-    document.querySelector("#question2").innerText = "Practice";
-    document.querySelector("#question3").innerText = "Click on me!";
-    document.querySelector("#question4").innerText = "Practice";
+    document.querySelector(".reasoning").innerText = "inductive reasoning";
+    document.querySelector(".yesOrNo").innerText = "I disagree, because...";
+    document.querySelector(".statement").innerText =
+      "Let's get the smaller cat instead of the bigger cat! ";
+    document.querySelector("#question1").innerText =
+      "There are no more smaller cats available, so we should get the bigger cat.";
+    document.querySelector("#question2").innerText =
+      "Smaller cats are easier to handle since they weigh less.";
+    document.querySelector("#question3").innerText =
+      "Bigger cats have more fur, and more fur is cute!";
+    document.querySelector("#question4").innerText =
+      "There are no more smaller cats available, so we should get the bigger cat.";
   }
 }
 
 // Questions Program
 var varQuestionAnswer = undefined;
 function clearAnswer() {
+  varQuestionAnswer = undefined;
+  document.querySelector(".confirm").style.backgroundColor = "#B4B4B4";
   document.querySelector("#question1").style.border = "5px solid transparent";
   document.querySelector("#question2").style.border = "5px solid transparent";
   document.querySelector("#question3").style.border = "5px solid transparent";
@@ -292,6 +366,17 @@ function initQuestion() {
   document.querySelector(".nextQuestionPage").style.display = "none";
   document.querySelector(".nextQuestionBtn").style.display = "none";
   document.querySelector(".confirm").style.backgroundColor = "#B4B4B4";
+
+  if (progressBarStatus < 100) {
+    console.log(practiceQuestion);
+    startGame();
+    varQuestionAnswer = undefined;
+    clearAnswer();
+  }
+  if (progressBarStatus == 100) {
+    document.querySelector("#page5").style.display = "none";
+    document.querySelector("#congratulations").style.display = "flex";
+  }
   if (practiceQuestion == 1) {
     randomizer();
     practiceQuestion = 0;
@@ -336,7 +421,7 @@ function correctPageShow() {
     document.querySelector(".result").innerHTML = "You got it!";
     document.querySelector(".resultsDescription").innerHTML =
       "Way to go champ!";
-    progressBarStatus = progressBarStatus + 20;
+    progressBarStatus = progressBarStatus + 100 / gameQuestions.length;
     document.querySelector(".blueBar").style.width = progressBarStatus + "%";
     ++questionCounterPage;
     ++questionCounter;
@@ -345,7 +430,10 @@ function correctPageShow() {
 
 // Confirm Function
 function confirm() {
-  if (varQuestionAnswer === false) {
+  if (varQuestionAnswer === false && healthStatus == 1) {
+    incorrectPageShow();
+    document.querySelector(".tryAgainButton").innerText = "Continue";
+  } else if (varQuestionAnswer === false) {
     incorrectPageShow();
   } else if (varQuestionAnswer === true) {
     correctPageShow();
