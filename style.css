@@ -100,10 +100,11 @@ body {
   max-width: 500px;
   text-align: center;
   padding: 20px 20px;
-  margin: 0px 20px;
+  margin: 10px 20px 20px;
   background-color: white;
   border-radius: 20px;
   box-shadow: 0px 0px 7px #acacac;
+  font-size: 1em;
 }
 
 .mascotImage {
@@ -151,10 +152,12 @@ body {
 
 .buttonRed {
   background-color: #f06364;
+  cursor: pointer;
 }
 
 .buttonRed:hover {
   background-color: rgb(99, 99, 99);
+  cursor: pointer;
 }
 .buttonGray {
   font-family: Baloo;
@@ -189,6 +192,7 @@ p {
   text-align: center;
   max-width: 430px;
   font-size: 16px;
+  margin: 20px; 
 }
 .pageTitle {
   font-size: 6em;
@@ -208,7 +212,13 @@ p {
 
 #page2 {
   display: none;
+  padding-bottom: 120px;
 }
+
+#introHeader {
+  margin-top: 5px;
+}
+
 
 /* Page 3 Definitions*/
 
@@ -225,7 +235,7 @@ p {
 /* Tabs */
 .tabReasoning {
   font-family: Baloo;
-  font-size: 16pt;
+  font-size: 20pt;
   color: white;
   border-radius: 20px 20px 0px 0px;
   text-decoration: white underline;
@@ -236,13 +246,14 @@ p {
 #tab {
   display: flex;
   justify-content: space-evenly;
+  margin-top: 15px;
 }
 
 #deductTab {
   padding: 10px 20px 30px;
   background-color: #f46969;
   text-decoration: white underline;
-  height: 25px;
+  height: 30px;
 }
 
 #inductTab {
@@ -495,6 +506,7 @@ h3 {
   color: #51c147;
 }
 
+
 @media (max-width: 500px) {
   .screen {
     width: 100%;
@@ -503,11 +515,21 @@ h3 {
   .tabReasoning {
     height: 150px;
   }
+  #page2 {
+    position: relative;
+  }
+  #tab {
+    margin-top: -25px;
+    margin-bottom: -25px;
+  }
+  .howToPlayTextBox {
+    padding: 1em; 
+  }
 }
 
 @media (max-height: 900px) {
   p {
-    font-size: 0.8em;
+    font-size: 1em;
   }
   .questionText {
     font-size: 1em;
@@ -520,23 +542,23 @@ h3 {
     min-height: 568px;
   }
   p {
-    font-size: 0.7em;
+    font-size: 1em;
   }
   .introText {
-    font-size: 0.8em;
+    font-size: 1em;
     margin: 20px 10px;
   }
   .navbar a {
     font-size: 0.8em;
   }
-  h2 {
+  /* h2 { */
     font-size: 1em;
   }
   .mascotImage {
     width: 175px;
     height: 175px;
   }
-  .btn {
+  /* .btn { */
     min-width: 110px;
     min-height: 35px;
     font-size: 1.1em;

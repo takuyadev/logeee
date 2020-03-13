@@ -57,7 +57,7 @@ function inductiveTab() {
   document.querySelector("#reasoningSubHeading").innerHTML =
     "Opinions over Facts";
   document.querySelector("#reasoningBody").innerHTML =
-    "Inductive reasoning is when, instead of arguing with facts, you attempt to convince someone of your beleifs by providing strong opinions that are likely true. <br/> <br/>  While inductive arguments are weaker, as they don't use proven facts, it is rare that we know all the details in every situation. Thus being able to provide convincing points is vital to achieving the outcomes we want";
+    "Inductive reasoning is when you attempt to convince someone of your beliefs by providing convincinig points. <br/> <br/>  While inductive arguments are generally weaker, as they don't use proven facts, it is rare that we know all the details in every situation. Thus being able to provide convincing points is vital to achieving the outcomes we want";
   document.querySelector(".buttonGray").style.backgroundColor = "#4098D7";
   document.querySelector("#nextPageBlue").style.display = "block";
   document.querySelector("#nextPageGray").style.display = "none";
