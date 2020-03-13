@@ -86,7 +86,7 @@
       <div class="nextQuestionPage">
         <h1 class="result"></h1>
         <p class="resultsDescription"></p>
-        <button class="nextQuestionBtn btn buttonRed" onclick="initQuestion()">Next Question</button>
+        <button class="nextQuestionBtn btn buttonRed" onclick="initQuestion(), clearAnswer();">Next Question</button>
       </div>
       <div class="incorrectPage">
         <p class="resultsDescription2"></p>
@@ -108,6 +108,7 @@
         <p class="questionText">and then confirm your answer.</p>
         <img class="mascotImage" src=http://placekitten.com/200/300 />
         <p class="statement"></p>
+        <p class="yesOrNo"></p>
         <button class="questionsBtn transition" id="question1" onclick="questionAnswer1()"></button>
         <button class="questionsBtn transition" id="question2" onclick="questionAnswer2()"></button>
         <button class="questionsBtn transition" id="question3" onclick="questionAnswer3()"></button>
