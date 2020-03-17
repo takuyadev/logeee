@@ -36,7 +36,7 @@ header {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  position: relative; 
+  position: relative;
 }
 
 /* style the changing lines */
@@ -134,11 +134,12 @@ body {
   text-align: center;
   min-width: 220px;
   max-width: 400px;
+  cursor: pointer;
 }
 
 .buttonBlue {
   background-color: #4098d7;
-  cursor: pointer;
+
   margin: 20px;
 }
 .buttonBlue:hover {
@@ -147,12 +148,10 @@ body {
 
 .buttonRed {
   background-color: #f06364;
-  cursor: pointer;
 }
 
 .buttonRed:hover {
   background-color: rgb(99, 99, 99);
-  cursor: pointer;
 }
 .buttonGray {
   font-family: Baloo;
@@ -163,6 +162,7 @@ body {
   background-color: #b4b4b4;
   border-radius: 40px;
   font-size: 22px;
+  cursor: default;
 }
 
 /* FONTS */
@@ -183,11 +183,16 @@ p {
 
 /* page 1 Homepage*/
 
+.heartImage {
+  width: 35px;
+  height: 35px;
+}
+
 .introText {
   text-align: center;
   max-width: 430px;
   font-size: 16px;
-  margin: 20px; 
+  margin: 20px;
 }
 .pageTitle {
   font-size: 6em;
@@ -207,13 +212,11 @@ p {
 
 #page2 {
   display: none;
-
 }
 
 #introHeader {
   margin-top: 5px;
 }
-
 
 /* Page 3 Definitions*/
 
@@ -421,6 +424,7 @@ h3 {
   align-items: center;
   border-radius: 50%;
   justify-content: center;
+  cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .quitBtn:hover {
@@ -433,9 +437,20 @@ h3 {
   position: relative;
 }
 
-.healthStatus {
+.health {
   grid-area: health;
+  position: relative;
+  text-align: center;
   margin: auto;
+}
+
+.healthStatus {
+  position: absolute;
+  top: 13%;
+  color: white;
+  font-weight: 900;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .blueBar,
@@ -525,14 +540,14 @@ h3 {
     margin-bottom: -25px;
   }
   .howToPlayTextBox {
-    padding: 1em; 
+    padding: 1em;
   }
   .mascotImage {
     width: 200px;
     height: 200px;
   }
   #page3 {
-    margin-top: -22px; 
+    margin-top: -22px;
   }
 }
 
@@ -561,11 +576,8 @@ h3 {
   .navbar a {
     font-size: 0.8em;
   }
-  /* h2 { */
-    font-size: 1em;
-  }
-  
-   .btn { 
+
+  .btn {
     min-width: 100px;
     min-height: 30px;
     font-size: 1em;
@@ -580,9 +592,6 @@ h3 {
   .tabReasoning {
     font-size: 1em;
   }
-
-  
-  
 }
 
 @media (max-height: 600px) and (max-width: 500px) {
@@ -592,7 +601,7 @@ h3 {
   p {
     font-size: 0.7em;
   }
- 
+
   .btn {
     min-width: 80px;
     min-height: 15px;

@@ -82,7 +82,7 @@ function deductiveTab() {
   document.querySelector("#reasoningSubHeading").innerHTML =
     "Facts over Opinions";
   document.querySelector("#reasoningBody").innerHTML =
-  "Deductive reasoning is when a person makes an arguement or decision that is backed up by facts. <br/> <br/> Deductive reasoning is usually harder to disprove, as it uses indisputable facts, however, it is a more difficult reasoning to use in everyday life, as it requires you to know all the relevent details of the siutation to successfully argue your point.";
+    "Deductive reasoning is when a person makes an arguement or decision that is backed up by facts. <br/> <br/> Deductive reasoning is usually harder to disprove, as it uses indisputable facts, however, it is a more difficult reasoning to use in everyday life, as it requires you to know all the relevent details of the siutation to successfully argue your point.";
   document.querySelector("#nextPageBlue").style.display = "block";
   document.querySelector("#definitionTab").src = "imgs/deductive.png";
   document.querySelector("#page3").style.marginTop = "-22px";
@@ -263,7 +263,7 @@ var gameQuestions = [
 ];
 var questionCounter = 0;
 var progressBarStatus = 0;
-var healthStatus = 3;
+var healthStatus = 5;
 var questionCounterPage = 1;
 var practiceQuestion = 1;
 var playedBefore = false;
@@ -271,9 +271,9 @@ var playedBefore = false;
 function restartGame() {
   questionCounter = 0;
   progressBarStatus = 0;
-  healthStatus = 3;
+  healthStatus = 5;
   questionCounterPage = 1;
-  document.querySelector(".healthStatus").innerHTML = healthStatus + "/3";
+  document.querySelector(".healthStatus").innerHTML = healthStatus;
   progressBarStatus = progressBarStatus;
   document.querySelector(".blueBar").style.width = progressBarStatus + "%";
   document.querySelector(".tryAgainButton").innerText = "Try Again!";
@@ -330,11 +330,13 @@ function clearAnswer() {
   document.querySelector("#question2").style.border = "5px solid transparent";
   document.querySelector("#question3").style.border = "5px solid transparent";
   document.querySelector("#question4").style.border = "5px solid transparent";
+  document.querySelector(".confirm").style.cursor = "default";
 }
 
 function questionAnswer1() {
   clearAnswer();
   document.querySelector(".confirm").style.backgroundColor = "#F46969";
+  document.querySelector(".confirm").style.cursor = "pointer";
   document.querySelector("#question1").style.border = "5px solid #F46969";
   varQuestionAnswer = gameQuestions[questionCounter].question1.answer;
   console.log(varQuestionAnswer);
@@ -343,6 +345,7 @@ function questionAnswer1() {
 function questionAnswer2() {
   clearAnswer();
   document.querySelector(".confirm").style.backgroundColor = "#F46969";
+  document.querySelector(".confirm").style.cursor = "pointer";
   document.querySelector("#question2").style.border = "5px solid #F46969";
   varQuestionAnswer = gameQuestions[questionCounter].question2.answer;
   console.log(varQuestionAnswer);
@@ -353,6 +356,7 @@ function questionAnswer3() {
   }
   clearAnswer();
   document.querySelector(".confirm").style.backgroundColor = "#F46969";
+  document.querySelector(".confirm").style.cursor = "pointer";
   document.querySelector("#question3").style.border = "5px solid #F46969";
   varQuestionAnswer = gameQuestions[questionCounter].question3.answer;
   console.log(varQuestionAnswer);
@@ -360,6 +364,7 @@ function questionAnswer3() {
 function questionAnswer4() {
   clearAnswer();
   document.querySelector(".confirm").style.backgroundColor = "#F46969";
+  document.querySelector(".confirm").style.cursor = "pointer";
   document.querySelector("#question4").style.border = "5px solid #F46969";
   varQuestionAnswer = gameQuestions[questionCounter].question4.answer;
   console.log(varQuestionAnswer);
@@ -410,7 +415,7 @@ function incorrectPageShow() {
     document.querySelector(".resultsDescription2").innerHTML =
       "Try hovering over the <u> underlined </u> word to see what the definitions are again!";
     healthStatus = healthStatus - 1;
-    document.querySelector(".healthStatus").innerHTML = healthStatus + "/3";
+    document.querySelector(".healthStatus").innerText = healthStatus;
   }
 }
 
