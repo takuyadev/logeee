@@ -94,6 +94,7 @@ var gameQuestions = [
     statements: "Let's go to Kirby Cafe instead of Pokemon Cafe.",
     reasoning: "deductive reasoning",
     yesorno: "Yes, because...",
+    image: 1,
     question1: {
       questionText: "The service at Pokemon Cafe is better",
       answer: false
@@ -115,6 +116,7 @@ var gameQuestions = [
     statements: "Should I get the new Nintendo Switch Console over the PS4?",
     reasoning: "deductive reasoning",
     yesorno: "Yes, because...",
+    image: 2,
     question1: {
       questionText: "It is portable, so we can play anywhere.",
       answer: true
@@ -136,6 +138,7 @@ var gameQuestions = [
     statements: "Cmon, we should play some kickball instead of baseball.",
     reasoning: "deductive reasoning",
     yesorno: "No, because...",
+    image: 3,
     question1: {
       questionText: "My feet HURT!",
       answer: false
@@ -157,6 +160,7 @@ var gameQuestions = [
     statements: "I think we should travel to Disneyland in July?",
     reasoning: "inductive reasoning",
     yesorno: "No, because...",
+    image: 4,
     question1: {
       questionText: "All the flights for that month are booked up",
       answer: false
@@ -178,6 +182,7 @@ var gameQuestions = [
     statements: "Should we go see the new Marvel movie this weekend?",
     reasoning: "inductive reasoning",
     yesorno: "Yes, because...",
+    image: 5,
     question1: {
       questionText:
         "The movie is playing at a time when we are both available. ",
@@ -201,6 +206,7 @@ var gameQuestions = [
     statements: "Should we buy cake or ice cream for dessert tonight?",
     reasoning: "inductive reasoning",
     yesorno: "Choose the best answer!",
+    image: 6,
     question1: {
       questionText: "Cake, because the ice cream will melt before we get home.",
       answer: false
@@ -222,6 +228,7 @@ var gameQuestions = [
     statements: "Should we go to the aquarium today! ",
     reasoning: "deductive reasoning",
     yesorno: "Yes, because...",
+    image: 7,
     question1: {
       questionText: "Sea animals are more interesting than land animals.",
       answer: false
@@ -243,6 +250,7 @@ var gameQuestions = [
     statements: "Apples are much better than oranges.",
     reasoning: "deductive reasoning",
     yesorno: "No, because...",
+    image: 8,
     question1: {
       questionText: "The colour orange is the nicest colour",
       answer: false
@@ -296,6 +304,8 @@ function startGame() {
     gameQuestions[questionCounter].statements;
   document.querySelector(".yesOrNo").innerText =
     gameQuestions[questionCounter].yesorno;
+  document.querySelector(".questionImage").src =
+    "imgs/Q" + gameQuestions[questionCounter].image + ".png";
   document.querySelector("#question1").innerText =
     gameQuestions[questionCounter].question1.questionText;
   document.querySelector("#question2").innerText =
@@ -308,6 +318,7 @@ function startGame() {
     document.querySelector(".questionCount").innerText = "Practice Question";
     document.querySelector(".reasoning").innerText = "inductive reasoning";
     document.querySelector(".yesOrNo").innerText = "I disagree, because...";
+    document.querySelector(".questionImage").src = "imgs/training.png";
     document.querySelector(".statement").innerText =
       "Let's get the smaller cat instead of the bigger cat! ";
     document.querySelector("#question1").innerText =
