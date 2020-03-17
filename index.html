@@ -11,46 +11,46 @@
   <div class="app">
     <div class="screen">
       <header>
-          <div class="navbar">
-            <a id="navbar_intro" onclick="Slidebar(1), nextPage(1)" href="#">Introduction</a>
-            <a id="navbar_defi" onclick="Slidebar(2), nextPage(2)" href="#">Definitions</a>
-            <a id="navbar_howto" onclick="Slidebar(3), nextPage(3)" href="#">How To Play</a>
-          </div>
-          <div class="slider">
-            <span id="navbar_bar"></span>
-            <span id="navbar_barback"></span>
-          </div>
+        <div class="navbar">
+          <a id="navbar_intro" onclick="Slidebar(1), nextPage(1)" href="#">Introduction</a>
+          <a id="navbar_defi" onclick="Slidebar(2), nextPage(2)" href="#">Definition</a>
+          <a id="navbar_howto" onclick="Slidebar(3), nextPage(3)" href="#">How To Play</a>
+        </div>
+        <div class="slider">
+          <span id="navbar_bar"></span>
+          <span id="navbar_barback"></span>
+        </div>
       </header>
       <!-- Page 1 Homepage -->
       <div class="page" id="page1">
         <h1 class="pageTitle">Logee</h1>
         <p class="introText">A short game that teaches the fundementals of deductive and inductive reasoning</p>
-        <img class="mascotImage" src="imgs/homepage.png"/>
+        <img class="mascotImage" src=http://placekitten.com/200/300 />
        <p class="introText">In this game, you will first be taught what deductive and inductive reasoning is, before applying that knowledge to a series of multiple choice questions</p>
-        <button class="buttonBlue btn" onclick="nextPage(1)">Lets Learn!</button>
+        <button class="buttonBlue btn transition" onclick="nextPage(1)">Lets Learn!</button>
       </div>
       <!-- Page 2 Intro -->
       <div class="page" id="page2">
-        <h2 id="introHeader">Introduction</h2>
-        <img class="mascotImage" src="imgs/homepage.png"/>
+        <h2 id="reasoningHeader">Introduction</h2>
+        <img class="mascotImage" src=http://placekitten.com/200/300 />
         <h2>Why is Reasoning Important?</h2>
         <p class="textBody">Everyday, we are faced with situations where we have to make decisions, or make a point. Reasoning is the act of constructing thoughts into valid arguments or reasons for why one decsion should be made over another. As such, knowing how to reason properly is important to
           evaluate the situations we are in, and successfully respond to them to achieve the outcomes we want.</p>
-        <button class="buttonBlue btn" id="page2Button" onclick="nextPage(2)">Next Page</button>
+        <button class="buttonBlue btn transition" id="page2Button" onclick="nextPage(2)">Next Page</button>
       </div>
       <!-- page 3 Deductive Reasoning -->
       <div class="page" id="page3">
         <h2 id="reasoningHeader">Deductive Reasoning</h2>
-        <img class="mascotImage" id="definitionTab" src="imgs/deductive.png"/>
+        <img class="mascotImage" src=http://placekitten.com/200/300 />
         <h2 id="reasoningSubHeading">Facts Over Opinions</h2>
-        <p class="textBody" id="reasoningBody"> Deductive reasoning is when a person makes an arguement or decsion that is backed up by true
-          facts. <br/> <br/> Deductive reasoning is generally harder to disprove, as it uses indisputable facts, however, it is a more difficult reasoning to use in everyday life, as it requires you to know all the relevent details of the siutation to successfully argue your point. </p>
+        <p class="textBody" id="reasoningBody"> Deductive reasoning is when a person makes an arguement or decsion by using true
+          facts. <br/> <br/> Deductive reasoning is harder to disprove, as it uses indisputable facts, however, it is a more difficult reasoning to use in everyday life, as it requires you to know all the relevent details of the siutation to successfully argue your point. </p>
         <div id="tab">
           <p id="deductTab" class="tabReasoning" onclick="deductiveTab()">Deductive</p>
           <p id="inductTab" class="tabReasoning" onclick="inductiveTab()">Inductive</p>
         </div>
-        <button class="btn buttonGray" id="nextPageGray">Next Page</button>
-        <button class="buttonBlue btn" id="nextPageBlue" onclick="nextPage(3)">Next Page</button>
+        <button class="btn buttonGray transition" id="nextPageGray">Next Page</button>
+        <button class="buttonBlue btn transition" id="nextPageBlue" onclick="nextPage(3)">Next Page</button>
       </div>
       <link rel="stylesheet" href="style.css" />
       <link href="https://fonts.googleapis.com/css?family=Baloo|Nunito:400,600,900&display=swap" rel="stylesheet" />
@@ -79,7 +79,7 @@
               Over!
             </p>
           </div>
-          <button class="btn buttonRed" onclick="nextPage(4), startGame()">Next Page</button>
+          <button class="btn buttonRed transition" onclick="nextPage(4), startGame()">Next Page</button>
         </div>
       </div>
       <!-- Page 5 Game Screen -->
@@ -101,7 +101,11 @@
             <div class="backBar transition"></div>
             <p class="questionCount"></p>
           </div>
-          <p class="healthStatus">3/3</p>
+          <div class="health">
+ <img src="imgs/heart.svg" alt="heart"  class="heartImage">
+ <p class="healthStatus">5</p>
+          </div>
+          
         </header>
         <p class="questionText">Select the answer that best represents</p>
         <p class="reasoning"></p>
@@ -128,7 +132,7 @@
             <p>LET'S GO TEAM</p>
             <img class="mascotImage" src=http://placekitten.com/200/300 />
             <button class="btn buttonBlue marginAuto" onclick="nextPage(4), restartGame(2), clearAnswer()">Try again</button>
-            <button class="btn buttonBlue marginAuto" onclick="nextPage(2), restartGame()" >Main menu</button>
+            <button class="btn buttonBlue marginAuto" onclick="nextPage(2), restartGame()">Main menu</button>
     </div>
     </div>
   </div>
