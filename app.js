@@ -57,10 +57,12 @@ function inductiveTab() {
   document.querySelector("#reasoningSubHeading").innerHTML =
     "Opinions over Facts";
   document.querySelector("#reasoningBody").innerHTML =
-    "Inductive reasoning is when you attempt to convince someone of your beliefs by providing convincinig points. <br/> <br/>  While inductive arguments are generally weaker, as they don't use proven facts, it is rare that we know all the details in every situation. Thus being able to provide convincing points is vital to achieving the outcomes we want";
+    "Inductive reasoning is when you attempt to convince someone of your beliefs by providing convincinig points. <br/> <br/>  While inductive arguments are generally weaker, as they don't rely on proven facts, it is rare that we know all the details in every situation. Thus, being able to provide convincing points is vital to achieving the outcomes we want.";
   document.querySelector(".buttonGray").style.backgroundColor = "#4098D7";
   document.querySelector("#nextPageBlue").style.display = "block";
   document.querySelector("#nextPageGray").style.display = "none";
+  document.querySelector("#definitionTab").src = "imgs/inductive.png";
+  document.querySelector("#page3").style.marginTop = "-20px";
 }
 
 function deductiveTab() {
@@ -80,8 +82,10 @@ function deductiveTab() {
   document.querySelector("#reasoningSubHeading").innerHTML =
     "Facts over Opinions";
   document.querySelector("#reasoningBody").innerHTML =
-    "Deductive reasoning is when a person makes an arguement or decsion by using true facts. <br/> <br/> Deductive reasoning is harder to disprove, as it uses indisputable facts, however, it is a more difficult reasoning to use in everyday life, as it requires you to know all the relevent details of the siutation to successfully argue your point.";
+  "Deductive reasoning is when a person makes an arguement or decision that is backed up by facts. <br/> <br/> Deductive reasoning is usually harder to disprove, as it uses indisputable facts, however, it is a more difficult reasoning to use in everyday life, as it requires you to know all the relevent details of the siutation to successfully argue your point.";
   document.querySelector("#nextPageBlue").style.display = "block";
+  document.querySelector("#definitionTab").src = "imgs/deductive.png";
+  document.querySelector("#page3").style.marginTop = "-22px";
 }
 
 //Game Questions
