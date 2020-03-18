@@ -230,10 +230,14 @@ p {
   display: none;
 }
 
+#definitionHeader {
+  font-size: 2px;
+}
+
 /* Tabs */
 .tabReasoning {
   font-family: Baloo;
-  font-size: 20pt;
+  font-size: 16pt;
   color: white;
   border-radius: 20px 20px 0px 0px;
   text-decoration: white underline;
@@ -248,21 +252,22 @@ p {
 }
 
 #deductTab {
-  padding: 10px 20px 30px;
+  padding: 10px 20px 24px;
   background-color: #f46969;
   text-decoration: white underline;
   height: 30px;
 }
 
 #inductTab {
-  padding: 5px 20px 15px;
+  padding: 5px 20px 16px;
   background-color: #af6262;
   height: 20px;
   margin-top: 45.5px;
 }
 
-#reasoningHeader {
+.reasoningHeader {
   margin: 5px;
+  font-size: 16;
 }
 
 /* Page 4 How to Play*/
@@ -519,8 +524,8 @@ h3 {
 @media (min-width: 501px) {
   .mascotImage {
     padding: 0px;
-    width: 250px;
-    height: 250px;
+    width: 260px;
+    height: 260px;
   }
 }
 
@@ -543,11 +548,11 @@ h3 {
     padding: 1em;
   }
   .mascotImage {
-    width: 200px;
-    height: 200px;
+    width: 210px;
+    height: 210px;
   }
   #page3 {
-    margin-top: -22px;
+    margin-top: -20px;
   }
 }
 

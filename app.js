@@ -53,7 +53,7 @@ function inductiveTab() {
   document.querySelector("#deductTab").style.height = "22px";
   document.querySelector("#deductTab").style.marginTop = "45px";
   document.querySelector("#deductTab").style.transition = "0.4s";
-  document.querySelector("#reasoningHeader").innerHTML = "Inductive Reasoning";
+  document.querySelector("#tabHeader").innerHTML = "Inductive Reasoning";
   document.querySelector("#reasoningSubHeading").innerHTML =
     "Opinions over Facts";
   document.querySelector("#reasoningBody").innerHTML =
@@ -61,8 +61,8 @@ function inductiveTab() {
   document.querySelector(".buttonGray").style.backgroundColor = "#4098D7";
   document.querySelector("#nextPageBlue").style.display = "block";
   document.querySelector("#nextPageGray").style.display = "none";
-  document.querySelector("#definitionTab").src = "imgs/inductive.png";
-  document.querySelector("#page3").style.marginTop = "-20px";
+  document.querySelector("#definitionTab").src = "imgs/definition1.svg";
+  document.querySelector("#page3").style.marginTop = "-2px";
 }
 
 function deductiveTab() {
@@ -78,14 +78,14 @@ function deductiveTab() {
   document.querySelector("#deductTab").style.height = "25px";
   document.querySelector("#deductTab").style.marginTop = "22px";
   document.querySelector("#deductTab").style.transition = "0.4s";
-  document.querySelector("#reasoningHeader").innerHTML = "Deductive Reasoning";
+  document.querySelector("#tabHeader").innerHTML = "Deductive Reasoning";
   document.querySelector("#reasoningSubHeading").innerHTML =
     "Facts over Opinions";
   document.querySelector("#reasoningBody").innerHTML =
     "Deductive reasoning is when a person makes an arguement or decision that is backed up by facts. <br/> <br/> Deductive reasoning is usually harder to disprove, as it uses indisputable facts, however, it is a more difficult reasoning to use in everyday life, as it requires you to know all the relevent details of the siutation to successfully argue your point.";
   document.querySelector("#nextPageBlue").style.display = "block";
-  document.querySelector("#definitionTab").src = "imgs/deductive.png";
-  document.querySelector("#page3").style.marginTop = "-22px";
+  document.querySelector("#definitionTab").src = "imgs/hippo.svg";
+  document.querySelector("#page3").style.marginTop = "-2px";
 }
 
 //Game Questions
@@ -420,11 +420,11 @@ function incorrectPageShow() {
   if (practiceQuestion == 1) {
     document.querySelector(".result2").innerHTML = "Oops!";
     document.querySelector(".resultsDescription2").innerHTML =
-      "Try hovering over the <u> underlined </u> word to see what the definitions are again!";
+      "Remember, <b> deductive reasoning </b> involves arguing your point of view using <b> proven facts </b>, such as “Cheetah’s are amazing, because they are the fastest land animal in the world.” <br /> <br /> By contrast, <b> inductive reasoning </b> involves arguing your point of view using <b> convincing opinions that could be true </b>, such as “Cheetah’s are amazing, because they are cute!"; 
   } else {
     document.querySelector(".result2").innerHTML = "Oops!";
     document.querySelector(".resultsDescription2").innerHTML =
-      "Try hovering over the <u> underlined </u> word to see what the definitions are again!";
+    "Remember, <b> deductive reasoning </b> involves arguing your point of view using <b> proven facts </b>, such as “Cheetah’s are amazing, because they are the fastest land animal in the world.” <br /> <br /> By contrast, <b> inductive reasoning </b> involves arguing your point of view using <b> convincing opinions that could be true </b>, such as “Cheetah’s are amazing, because they are cute!"; 
     healthStatus = healthStatus - 1;
     document.querySelector(".healthStatus").innerText = healthStatus;
   }
