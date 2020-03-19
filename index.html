@@ -111,7 +111,7 @@
         <p class="reasoning"></p>
         <p class="questionText">and then confirm your answer.</p>
         <img class="mascotImage questionImage" src=http://placekitten.com/200/300 />
-        <p class="statement"></p>
+        <b class="statement"></b>
         <p class="yesOrNo"></p>
         <button class="questionsBtn transition" id="question1" onclick="questionAnswer1()"></button>
         <button class="questionsBtn transition" id="question2" onclick="questionAnswer2()"></button>
@@ -122,14 +122,14 @@
       </div>
         <div id="gameOver" class="page" >
             <h1 class="gameOverText">OOPS</h1>
-            <p>You can do this next time, Champ</p>
+            <p>You can do this next time, champ!</p>
             <img class="mascotImage" src=http://placekitten.com/200/300 />
             <button class="btn buttonBlue marginAuto" onclick="nextPage(4), restartGame(2), clearAnswer()">Try again</button>
             <button class="btn buttonBlue marginAuto" onclick="nextPage(2),  restartGame()">Main menu</button>
     </div>
     <div id="congratulations" class="page" >
             <h1 class="congratulationText">Congrats!</h1>
-            <p>LET'S GO TEAM</p>
+            <p>You are the reasoning <b> MASTER! </b></p>
             <img class="mascotImage" src=http://placekitten.com/200/300 />
             <button class="btn buttonBlue marginAuto" onclick="nextPage(4), restartGame(2), clearAnswer()">Try again</button>
             <button class="btn buttonBlue marginAuto" onclick="nextPage(2), restartGame()">Main menu</button>
