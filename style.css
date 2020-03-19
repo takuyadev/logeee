@@ -177,7 +177,8 @@ h6 {
 h2 {
   margin: 10px;
 }
-p {
+p,
+b {
   font-size: 16px;
 }
 
@@ -295,6 +296,7 @@ p {
 }
 
 p,
+b,
 #question1,
 #question2,
 #question3,
@@ -307,6 +309,9 @@ h1,
 h2,
 h3 {
   font-family: "Baloo";
+}
+b {
+  margin: 10px;
 }
 
 .reasoning {

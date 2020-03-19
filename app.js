@@ -305,7 +305,7 @@ function startGame() {
   document.querySelector(".yesOrNo").innerText =
     gameQuestions[questionCounter].yesorno;
   document.querySelector(".questionImage").src =
-    "imgs/Q" + gameQuestions[questionCounter].image + ".png";
+    "imgs/Q" + gameQuestions[questionCounter].image + ".svg";
   document.querySelector("#question1").innerText =
     gameQuestions[questionCounter].question1.questionText;
   document.querySelector("#question2").innerText =
@@ -318,7 +318,7 @@ function startGame() {
     document.querySelector(".questionCount").innerText = "Practice Question";
     document.querySelector(".reasoning").innerText = "inductive reasoning";
     document.querySelector(".yesOrNo").innerText = "I disagree, because...";
-    document.querySelector(".questionImage").src = "imgs/training.png";
+    document.querySelector(".questionImage").src = "imgs/training.svg";
     document.querySelector(".statement").innerText =
       "Let's get the smaller cat instead of the bigger cat! ";
     document.querySelector("#question1").innerText =
@@ -420,11 +420,11 @@ function incorrectPageShow() {
   if (practiceQuestion == 1) {
     document.querySelector(".result2").innerHTML = "Oops!";
     document.querySelector(".resultsDescription2").innerHTML =
-      "Remember, <b> deductive reasoning </b> involves arguing your point of view using <b> proven facts </b>, such as “Cheetah’s are amazing, because they are the fastest land animal in the world.” <br /> <br /> By contrast, <b> inductive reasoning </b> involves arguing your point of view using <b> convincing opinions that could be true </b>, such as “Cheetah’s are amazing, because they are cute!"; 
+      "Remember, <b> deductive reasoning </b> involves arguing your point of view using <b> proven facts </b>, such as “Cheetah’s are amazing, because they are the fastest land animal in the world.” <br /> <br /> By contrast, <b> inductive reasoning </b> involves arguing your point of view using <b> convincing opinions that could be true </b>, such as “Cheetah’s are amazing, because they are cute!";
   } else {
     document.querySelector(".result2").innerHTML = "Oops!";
     document.querySelector(".resultsDescription2").innerHTML =
-    "Remember, <b> deductive reasoning </b> involves arguing your point of view using <b> proven facts </b>, such as “Cheetah’s are amazing, because they are the fastest land animal in the world.” <br /> <br /> By contrast, <b> inductive reasoning </b> involves arguing your point of view using <b> convincing opinions that could be true </b>, such as “Cheetah’s are amazing, because they are cute!"; 
+      "Remember, <b> deductive reasoning </b> involves arguing your point of view using <b> proven facts </b>, such as “Cheetah’s are amazing, because they are the fastest land animal in the world.” <br /> <br /> By contrast, <b> inductive reasoning </b> involves arguing your point of view using <b> convincing opinions that could be true </b>, such as “Cheetah’s are amazing, because they are cute!";
     healthStatus = healthStatus - 1;
     document.querySelector(".healthStatus").innerText = healthStatus;
   }
