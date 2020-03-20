@@ -383,6 +383,18 @@ b {
   background-color: rgba(110, 203, 102, 0.91);
 }
 
+.nextQuestionPage2 {
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  z-index: 2;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rgba(110, 203, 102, 0.91);
+}
+
 .incorrectPage {
   width: 100vw;
   height: 100vh;
@@ -396,18 +408,22 @@ b {
 }
 
 .nextQuestionBtn,
+.nextQuestionBtn2,
 .tryAgainButton {
   display: none;
   order: 3;
 }
 .resultsDescription,
-.resultsDescription2 {
+.resultsDescription2,
+.resultsDescription3 {
   order: 2;
+  text-align: center;
   color: white;
-  margin: 0;
+  margin: 0px 50px;
 }
 .result,
-.result2 {
+.result2,
+.result3 {
   color: white;
   order: 1;
 }

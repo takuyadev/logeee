@@ -75,14 +75,19 @@
           <img src="imgs/arrow.svg" alt="" class="arrowImage">
           <div class="howToPlayTextBox">
             <p>
-              Once you have picked your choice, <b>hit the “Confirm” button.</b> If you are wrong 3 times, its a Game
+              Once you have picked your choice, <b>hit the “Confirm” button.</b> If you are wrong 5 times, its a Game
               Over!
             </p>
           </div>
-          <button class="btn buttonRed transition" onclick="nextPage(4), startGame()">Next Page</button>
+          <button class="btn buttonRed transition practiceButton" onclick="nextPage(4), startGame(), practicePopup()">Start Practice</button>
         </div>
       </div>
       <!-- Page 5 Game Screen -->
+      <div class="nextQuestionPage2">
+        <h1 class="result3"></h1>
+        <p class="resultsDescription3"></p>
+        <button class="nextQuestionBtn2 btn buttonRed" onclick="practicePopupNone()">Let's Practice!</button>
+      </div>
       <div class="nextQuestionPage">
         <h1 class="result"></h1>
         <p class="resultsDescription"></p>
@@ -95,14 +100,14 @@
       </div>
       <div class="page" id="page5">
         <header class="statusHeader">
-          <div class="quitBtn transition" onclick="nextPage(3), clearAnswer()">X</div>
+          <div class="quitBtn transition " onclick="nextPage(3), clearAnswer(), changeHowToPlayButtonText() ">X</div>
           <div class="progressBar">
             <div class="blueBar transition"></div>
             <div class="backBar transition"></div>
             <p class="questionCount"></p>
           </div>
           <div class="health">
- <img src="imgs/heart.svg" alt="heart"  class="heartImage">
+ <img src="imgs/heart.svg" alt="heart" class="heartImage">
  <p class="healthStatus">5</p>
           </div>
           
@@ -123,16 +128,16 @@
         <div id="gameOver" class="page" >
             <h1 class="gameOverText">OOPS</h1>
             <p>You can do this next time, champ!</p>
-            <img class="mascotImage" src=http://placekitten.com/200/300 />
+            <img class="mascotImage" src="imgs/gameover.svg" />
             <button class="btn buttonBlue marginAuto" onclick="nextPage(4), restartGame(2), clearAnswer()">Try again</button>
             <button class="btn buttonBlue marginAuto" onclick="nextPage(2),  restartGame()">Main menu</button>
     </div>
     <div id="congratulations" class="page" >
             <h1 class="congratulationText">Congrats!</h1>
-            <p>You are the reasoning <b> MASTER! </b></p>
-            <img class="mascotImage" src=http://placekitten.com/200/300 />
-            <button class="btn buttonBlue marginAuto" onclick="nextPage(4), restartGame(2), clearAnswer()">Try again</button>
-            <button class="btn buttonBlue marginAuto" onclick="nextPage(2), restartGame()">Main menu</button>
+            <p>You are the reasoning <b>MASTER!</b></p>
+            <img class="mascotImage" src="imgs/congrat.svg" />
+            <button class="btn buttonBlue marginAuto" onclick="nextPage(4), restartGame(2), clearAnswer(), changeHowToPlayButtonText()">Try again</button>
+            <button class="btn buttonBlue marginAuto" onclick="nextPage(2), restartGame(), changeHowToPlayButtonText()">Main menu</button>
     </div>
     </div>
   </div>
