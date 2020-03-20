@@ -409,9 +409,9 @@ function practicePopup() {
   if (practiceQuestion === 1) {
     document.querySelector(".nextQuestionBtn2").style.display = "flex";
     document.querySelector(".nextQuestionPage2").style.display = "flex";
-    document.querySelector(".result3").innerHTML = "Let's start practicing!";
+    document.querySelector(".result3").innerHTML = "Let's Practice!";
     document.querySelector(".resultsDescription3").innerHTML =
-      "Let's see how you do!";
+      "Let's see how you do! You won't lose any lives in this mode, so do your best to find the best answer!";
   }
 }
 
