@@ -403,6 +403,28 @@ function initQuestion() {
     startGame();
   }
 }
+//Practice questions page show
+
+function practicePopup() {
+  if (practiceQuestion === 1) {
+    document.querySelector(".nextQuestionBtn2").style.display = "flex";
+    document.querySelector(".nextQuestionPage2").style.display = "flex";
+    document.querySelector(".result3").innerHTML = "Let's start practicing!";
+    document.querySelector(".resultsDescription3").innerHTML =
+      "Let's see how you do!";
+  }
+}
+
+function practicePopupNone() {
+  document.querySelector(".nextQuestionBtn2").style.display = "none";
+  document.querySelector(".nextQuestionPage2").style.display = "none";
+}
+
+function changeHowToPlayButtonText() {
+  if (practiceQuestion == 0) {
+    document.querySelector(".practiceButton").innerText = "Start Game";
+  }
+}
 
 //Try Again
 function tryAgain() {
@@ -435,6 +457,7 @@ function correctPageShow() {
   document.querySelector(".nextQuestionPage").style.display = "flex";
   if (practiceQuestion == 1) {
     document.querySelector(".result").innerHTML = "You got it!";
+    document.querySelector(".nextQuestionBtn").style.display = "flex";
     document.querySelector(".resultsDescription").innerHTML =
       "You're ready to go! Beat those questions, I know you can do it!";
   } else {
