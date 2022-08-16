@@ -1,4 +1,4 @@
-# Shelfie - BCIT Midterm Project
+# Logeee - BCIT 2nd Term Final Project
 
 This project is deployed at the [link here.](https://shelfie-takuyatoyokawa.vercel.app/)
 
