@@ -1,4 +1,4 @@
-# Logeee - BCIT 2nd Term Final Project
+# Logeee - BCIT 2nd Term, Dynamic Content Final Project
 
 This project is deployed at the [link here.](https://shelfie-takuyatoyokawa.vercel.app/)
 
